@@ -1,0 +1,41 @@
+body {
+    font-family: 'Public Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.glass-nav {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(24px);
+}
+
+.ambient-shadow {
+    box-shadow: 0 32px 64px -12px rgba(1, 45, 29, 0.06);
+}
+
+.text-editorial {
+    letter-spacing: -0.02em;
+}
+
+.hero-gradient {
+    background: linear-gradient(135deg, #012d1d 0%, #1b4332 100%);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}

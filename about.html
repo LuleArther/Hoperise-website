@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Our Journey | HopeRise</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "secondary-container": "#a4f792",
+                        "tertiary-container": "#7e0017",
+                        "tertiary-fixed-dim": "#ffb3b1",
+                        "on-secondary-fixed-variant": "#005303",
+                        "primary-container": "#1b4332",
+                        "surface-tint": "#3f6653",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-primary-fixed": "#002114",
+                        "primary-fixed": "#c1ecd4",
+                        "secondary-fixed-dim": "#89da79",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#ff8080",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#267320",
+                        "tertiary": "#55000c",
+                        "secondary-fixed": "#a4f792",
+                        "on-tertiary-fixed-variant": "#92001c",
+                        "surface": "#f7f9fb",
+                        "surface-container": "#eceef0",
+                        "on-tertiary-fixed": "#410007",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c1c8c2",
+                        "outline": "#717973",
+                        "primary": "#012d1d",
+                        "on-error": "#ffffff",
+                        "background": "#f7f9fb",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f7f9fb",
+                        "on-error-container": "#93000a",
+                        "secondary": "#1f6d1a",
+                        "on-primary-fixed-variant": "#274e3d",
+                        "on-secondary-fixed": "#002201",
+                        "surface-dim": "#d8dadc",
+                        "inverse-surface": "#2d3133",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-surface": "#191c1e",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e6e8ea",
+                        "on-surface-variant": "#414844",
+                        "inverse-primary": "#a5d0b9",
+                        "on-primary-container": "#86af99",
+                        "on-background": "#191c1e",
+                        "tertiary-fixed": "#ffdad8",
+                        "primary-fixed-dim": "#a5d0b9"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        lg: "0.75rem",
+                        xl: "1rem",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Plus Jakarta Sans"],
+                        body: ["Plus Jakarta Sans"],
+                        label: ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f7f9fb; color: #191c1e; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(24px); }
+        .ambient-shadow { box-shadow: 0 32px 64px -12px rgba(1, 45, 29, 0.06); }
+        .text-editorial { letter-spacing: -0.02em; }
+    </style>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-surface text-on-surface antialiased">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#fbffe1]/80 backdrop-blur-md dark:bg-[#303d00]/80">
+        <div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+            <a class="flex items-center gap-3 text-2xl font-bold text-[#303d00] dark:text-[#fbffe1] font-['Plus_Jakarta_Sans'] tracking-tight" href="index.html">
+                <img alt="HopeRise Logo" class="h-10 w-10 object-contain" src="website images/Hope-rise-top-logo.webp" />
+                <span>HopeRise</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="index.html">Home</a>
+                <a class="text-[#336f54] dark:text-[#dcfb74] font-bold border-b-2 border-[#336f54] dark:border-[#dcfb74] pb-1 font-['Plus_Jakarta_Sans'] tracking-tight" href="about.html">About Us</a>
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="programs.html">Programs</a>
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="impact.html">Impact</a>
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="get-involved.html">Get Involved</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="hidden md:block px-6 py-2 rounded-full border border-primary text-primary font-semibold active:scale-95 transition-transform hover:bg-primary/5">Volunteer</button>
+                <button class="px-6 py-2 rounded-full bg-primary text-on-primary font-bold active:scale-95 transition-transform shadow-lg shadow-primary/20">Donate</button>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-32 pb-24">
+        <!-- Hero Journey -->
+        <section class="max-w-7xl mx-auto px-8 mb-32">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-wider">
+                        Our History
+                    </span>
+                    <h1 class="text-6xl font-extrabold text-editorial text-primary leading-[1.1]">
+                        From a Single Act of Compassion to a Community of Hope.
+                    </h1>
+                    <p class="text-xl text-on-surface-variant leading-relaxed max-w-xl">
+                        HopeRise, initially the ‘Hope for a Child’s Sanctuary’ (HACS) program, was founded in 2019 by a compassionate and dedicated social worker out of a deep-seated desire to address the pressing needs of vulnerable children and families in the community.
+                    </p>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -inset-4 bg-secondary-container/20 rounded-[2rem] blur-2xl group-hover:bg-secondary-container/30 transition-colors duration-500"></div>
+                    <img alt="Group of children smiling" class="relative rounded-[2rem] object-cover aspect-[4/3] ambient-shadow" src="website images/HOPERISE XUL VISIT/IMG20250201164451.jpg" />
+                </div>
+            </div>
+        </section>
+        <!-- Narrative Timeline Section -->
+        <section class="bg-surface-container-low py-32 rounded-[3rem] mx-4 lg:mx-8">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex flex-col gap-32">
+                    <!-- 2019: The Seed -->
+                    <div class="grid md:grid-cols-12 gap-8 items-start">
+                        <div class="md:col-span-4 sticky top-32">
+                            <h2 class="text-8xl font-black text-primary/10">2019</h2>
+                            <h3 class="text-3xl font-bold text-primary mt-[-2rem]">The Seed is Planted</h3>
+                            <p class="mt-4 text-on-surface-variant">What began as the ‘Hope for a Child’s Sanctuary’ (HACS) program started with supporting just one household, providing essential support to a family of seven. This single act of compassion laid the foundation for our future growth.</p>
+                        </div>
+                        <div class="md:col-span-8">
+                            <div class="bg-surface-container-lowest p-10 rounded-xl ambient-shadow">
+                                <div class="flex items-center gap-6 mb-8">
+                                    <div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-on-secondary-container text-3xl">eco</span>
+                                    </div>
+                                    <h4 class="text-xl font-bold text-primary">Founding Vision</h4>
+                                </div>
+                                <p class="text-lg leading-relaxed text-on-surface-variant">
+                                    The initial vision was simple: to intervene where the need was most acute. It was about restoring dignity and offering a glimmer of hope, one family at a time, ensuring that vulnerable children had the chance to thrive.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2021: Roots Deepen -->
+                    <div class="grid md:grid-cols-12 gap-8 items-start">
+                        <div class="md:col-span-8 order-2 md:order-1">
+                            <div class="grid grid-cols-2 gap-4">
+                                <img alt="Community meeting" class="rounded-xl object-cover h-64 w-full" src="website images/HOPERISE XUL VISIT/IMG20250201164538.jpg" />
+                                <img alt="Classroom with students" class="rounded-xl object-cover h-64 w-full" src="website images/EduSave-School Mentorship/415A1619.JPG" />
+                            </div>
+                        </div>
+                        <div class="md:col-span-4 sticky top-32 order-1 md:order-2 text-right">
+                            <h2 class="text-8xl font-black text-primary/10">2021</h2>
+                            <h3 class="text-3xl font-bold text-primary mt-[-2rem]">A Network of Compassion</h3>
+                            <p class="mt-4 text-on-surface-variant">By 2021, our efforts had expanded significantly. We were serving over 45 homes and more than 90 children. This period marked the launch of our "EduSave" program, broadening our impact from basic needs to educational empowerment.</p>
+                        </div>
+                    </div>
+                    <!-- Today: The Living Sanctuary -->
+                    <div class="grid md:grid-cols-12 gap-8 items-start">
+                        <div class="md:col-span-4 sticky top-32">
+                            <h2 class="text-8xl font-black text-primary/10">Today</h2>
+                            <h3 class="text-3xl font-bold text-primary mt-[-2rem]">Holistic Development</h3>
+                            <p class="mt-4 text-on-surface-variant">HopeRise has evolved into a comprehensive support system, offering not just aid but also vocational training, mentorship, and community-based programs aimed at fostering long-term self-sufficiency.</p>
+                        </div>
+                        <div class="md:col-span-8">
+                            <div class="bg-primary text-on-primary p-12 rounded-[2rem] shadow-2xl relative overflow-hidden">
+                                <div class="absolute top-0 right-0 p-8 opacity-10">
+                                    <span class="material-symbols-outlined text-[12rem]">park</span>
+                                </div>
+                                <div class="relative z-10 space-y-6">
+                                    <span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-sm font-bold">CURRENT MILESTONE</span>
+                                    <h4 class="text-4xl font-extrabold tracking-tight">Empowering Futures</h4>
+                                    <p class="text-primary-fixed leading-relaxed text-xl">
+                                        We are redefining resilience by creating a multi-faceted ecosystem that provides education, vocational training, and mental health support, empowering individuals to build a brighter future for themselves and their communities.
+                                    </p>
+                                    <div class="pt-6 flex gap-4">
+                                        <div class="bg-primary-container p-4 rounded-lg">
+                                            <div class="text-2xl font-bold text-secondary-fixed">90+</div>
+                                            <div class="text-xs text-on-primary-container/80 uppercase tracking-widest font-bold">Children Supported</div>
+                                        </div>
+                                        <div class="bg-primary-container p-4 rounded-lg">
+                                            <div class="text-2xl font-bold text-secondary-fixed">45+</div>
+                                            <div class="text-xs text-on-primary-container/80 uppercase tracking-widest font-bold">Homes Reached</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our Philosophy (Bento) -->
+        <section class="max-w-7xl mx-auto px-8 mt-32">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-primary mb-4">The Pillars of Our Vision</h2>
+                <div class="w-24 h-1.5 bg-secondary-container mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-surface-container-low p-8 rounded-xl md:col-span-2">
+                    <span class="material-symbols-outlined text-secondary text-4xl mb-4">psychology</span>
+                    <h3 class="text-2xl font-bold text-primary mb-3">Holistic Growth</h3>
+                    <p class="text-on-surface-variant leading-relaxed">We believe that nourishing the body is only the first step. Our programs integrate mental well-being and community connection to ensure long-term stability and happiness for every participant.</p>
+                </div>
+                <div class="bg-secondary-container p-8 rounded-xl">
+                    <span class="material-symbols-outlined text-on-secondary-container text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">diversity_2</span>
+                    <h3 class="text-2xl font-bold text-on-secondary-container mb-3">Radical Inclusivity</h3>
+                    <p class="text-on-secondary-container/80 font-medium">Space for everyone, regardless of history or heritage. Our sanctuary is built on the belief that diversity is our greatest strength.</p>
+                </div>
+                <div class="bg-surface-container-highest p-8 rounded-xl">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">energy_savings_leaf</span>
+                    <h3 class="text-2xl font-bold text-primary mb-3">Eco-Stewardship</h3>
+                    <p class="text-on-surface-variant leading-relaxed">Sustainability isn't a buzzword; it's our blueprint. We use regenerative practices in everything we touch.</p>
+                </div>
+                <div class="bg-primary text-on-primary p-8 rounded-xl md:col-span-2 flex items-center justify-between">
+                    <div class="max-w-md">
+                        <h3 class="text-2xl font-bold mb-2">Join the Movement</h3>
+                        <p class="text-on-primary-container">Become a part of our ongoing story. Your support helps us expand our reach to the next community in need.</p>
+                    </div>
+                    <a href="get-involved.html" class="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 rounded-lg font-bold hover:scale-105 transition-transform">
+                        Volunteer Now
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#f4ffc8] dark:bg-[#1a2000] w-full rounded-t-[2rem] mt-20">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 w-full max-w-7xl mx-auto">
+            <div class="space-y-6">
+                <div class="flex items-center gap-3">
+                    <img alt="HopeRise Logo" class="h-10 w-10 object-contain" src="website images/Hope-rise-top-logo.webp" />
+                    <h3 class="text-xl font-black text-[#303d00] dark:text-[#fbffe1] font-['Plus_Jakarta_Sans']">HopeRise</h3>
+                </div>
+                <p class="text-[#303d00] dark:text-[#fbffe1] opacity-80 font-['Public_Sans'] text-sm leading-relaxed">
+                    Building resilient communities across Uganda through hope, empowerment, and sustainable action.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+                        <span class="material-symbols-outlined">public</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+                        <span class="material-symbols-outlined">mail</span>
+                    </a>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-bold text-[#336f54] dark:text-[#dcfb74]">Quick Links</h4>
+                <ul class="space-y-3 font-['Public_Sans'] text-sm">
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:translate-x-1 hover:text-[#336f54] transition-all block" href="about.html">History</a></li>
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:translate-x-1 hover:text-[#336f54] transition-all block" href="programs.html">HACS Program</a></li>
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:translate-x-1 hover:text-[#336f54] transition-all block" href="programs.html">EduSave</a></li>
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:translate-x-1 hover:text-[#336f54] transition-all block" href="impact.html">Josephine's Story</a></li>
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:translate-x-1 hover:text-[#336f54] transition-all block" href="get-involved.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-bold text-[#336f54] dark:text-[#dcfb74]">Our Impact</h4>
+                <div class="space-y-4">
+                    <div class="bg-surface/50 p-4 rounded-xl">
+                        <div class="text-2xl font-bold text-secondary">2,400+</div>
+                        <p class="text-xs text-on-surface-variant uppercase font-bold tracking-wider">Students Sponsored</p>
+                    </div>
+                    <div class="bg-surface/50 p-4 rounded-xl">
+                        <div class="text-2xl font-bold text-primary">85%</div>
+                        <p class="text-xs text-on-surface-variant uppercase font-bold tracking-wider">Farmer Income Growth</p>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-bold text-[#336f54] dark:text-[#dcfb74]">Newsletter</h4>
+                <p class="text-[#303d00] dark:text-[#fbffe1] opacity-80 font-['Public_Sans'] text-sm">Subscribe to receive updates on our community projects.</p>
+                <div class="flex flex-col gap-2">
+                    <input class="bg-white/50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#336f54]" placeholder="Your email" type="email" />
+                    <button class="bg-[#336f54] text-white py-3 rounded-xl font-bold text-sm active:scale-95 transition-transform">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-12 pb-12 pt-8 border-t border-[#303d00]/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#303d00]/60">
+            <p>© 2026 HopeRise for Vulnerable Communities Uganda. All rights reserved.</p>
+            <div class="flex gap-8">
+                <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

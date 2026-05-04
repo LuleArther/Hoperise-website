@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Impact & Stories | HopeRise</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "secondary-container": "#a4f792",
+                        "tertiary-container": "#7e0017",
+                        "tertiary-fixed-dim": "#ffb3b1",
+                        "on-secondary-fixed-variant": "#005303",
+                        "primary-container": "#1b4332",
+                        "surface-tint": "#3f6653",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-primary-fixed": "#002114",
+                        "primary-fixed": "#c1ecd4",
+                        "secondary-fixed-dim": "#89da79",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#ff8080",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#267320",
+                        "tertiary": "#55000c",
+                        "secondary-fixed": "#a4f792",
+                        "on-tertiary-fixed-variant": "#92001c",
+                        "surface": "#f7f9fb",
+                        "surface-container": "#eceef0",
+                        "on-tertiary-fixed": "#410007",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#c1c8c2",
+                        "outline": "#717973",
+                        "primary": "#012d1d",
+                        "on-error": "#ffffff",
+                        "background": "#f7f9fb",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f7f9fb",
+                        "on-error-container": "#93000a",
+                        "secondary": "#1f6d1a",
+                        "on-primary-fixed-variant": "#274e3d",
+                        "on-secondary-fixed": "#002201",
+                        "surface-dim": "#d8dadc",
+                        "inverse-surface": "#2d3133",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-surface": "#191c1e",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e6e8ea",
+                        "on-surface-variant": "#414844",
+                        "inverse-primary": "#a5d0b9",
+                        "on-primary-container": "#86af99",
+                        "on-background": "#191c1e",
+                        "tertiary-fixed": "#ffdad8",
+                        "primary-fixed-dim": "#a5d0b9"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Plus Jakarta Sans"],
+                        body: ["Plus Jakarta Sans"],
+                        label: ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #012d1d 0%, #1b4332 100%);
+        }
+        .editorial-shadow {
+            box-shadow: 0 32px 64px -12px rgba(1, 45, 29, 0.06);
+        }
+    </style>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-background text-on-surface antialiased">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-emerald-950/80 backdrop-blur-[24px] shadow-sm shadow-emerald-900/5 transition-all duration-300">
+        <div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <img alt="HopeRise Logo" class="h-10 w-auto" src="website images/Hope-rise-top-logo.webp" />
+                <span class="text-2xl font-extrabold tracking-[-0.02em] text-emerald-900 dark:text-emerald-50">HopeRise</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-emerald-800/70 dark:text-emerald-200/70 font-medium hover:text-emerald-600 dark:hover:text-emerald-300 transition-all duration-300" href="index.html">Home</a>
+                <a class="text-emerald-800/70 dark:text-emerald-200/70 font-medium hover:text-emerald-600 dark:hover:text-emerald-300 transition-all duration-300" href="about.html">About Us</a>
+                <a class="text-emerald-800/70 dark:text-emerald-200/70 font-medium hover:text-emerald-600 dark:hover:text-emerald-300 transition-all duration-300" href="programs.html">Programs</a>
+                <a class="text-emerald-900 dark:text-emerald-400 font-bold border-b-2 border-emerald-900 dark:border-emerald-400 pb-1" href="impact.html">Impact</a>
+                <a class="text-emerald-800/70 dark:text-emerald-200/70 font-medium hover:text-emerald-600 dark:hover:text-emerald-300 transition-all duration-300" href="get-involved.html">Get Involved</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-bold active:scale-95 transition-transform">Donate</button>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative py-24 px-8 max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="z-10">
+                    <span class="inline-block px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-sm font-bold tracking-wide uppercase mb-6">Our Impact</span>
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-primary tracking-tight leading-[1.1] mb-8">
+                        Stories of Change, <br />
+                        <span class="text-secondary">Seeds of Hope.</span>
+                    </h1>
+                    <p class="text-lg text-on-surface-variant leading-relaxed mb-10 max-w-xl">
+                        Our impact is measured not just in numbers, but in the individual lives transformed. Each statistic represents a story of resilience, empowerment, and renewed hope for a brighter future.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#stories" class="hero-gradient text-on-primary px-8 py-4 rounded-lg font-bold shadow-lg flex items-center gap-2 group">
+                            Read Our Stories
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl"></div>
+                    <div class="rounded-2xl overflow-hidden editorial-shadow bg-surface-container-lowest p-4 relative">
+                        <img class="w-full h-[500px] object-cover rounded-xl" src="website images/HOPERISE XUL VISIT/IMG20250201164841.jpg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Stats Bento Grid -->
+        <section class="py-24 bg-surface-container-low px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <h2 class="text-3xl font-bold text-primary mb-4">By the Numbers</h2>
+                    <div class="w-20 h-1.5 bg-on-tertiary-container rounded-full"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <!-- Stat 1 -->
+                    <div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-xl editorial-shadow flex flex-col justify-between">
+                        <div>
+                            <span class="material-symbols-outlined text-4xl text-secondary mb-6">school</span>
+                            <h3 class="text-6xl font-extrabold text-primary mb-4">90+</h3>
+                            <p class="text-xl font-bold text-on-surface-variant uppercase tracking-wider">Children Supported</p>
+                        </div>
+                        <p class="mt-8 text-on-surface-variant">Through our EduSave program, we provide school fees and materials, ensuring access to education.</p>
+                    </div>
+                    <!-- Stat 2 -->
+                    <div class="bg-primary text-on-primary p-10 rounded-xl editorial-shadow">
+                        <span class="material-symbols-outlined text-4xl text-on-primary-container mb-6">home</span>
+                        <h3 class="text-5xl font-extrabold mb-4">45+</h3>
+                        <p class="text-sm font-bold opacity-80 uppercase tracking-widest mb-4">Homes Reached</p>
+                        <p class="text-on-primary-container leading-relaxed">Our HACS program provides essential support to families, fostering a stable environment for children.</p>
+                    </div>
+                    <!-- Stat 3 -->
+                    <div class="bg-secondary text-on-secondary p-10 rounded-xl editorial-shadow">
+                        <span class="material-symbols-outlined text-4xl text-secondary-container mb-6">work</span>
+                        <h3 class="text-5xl font-extrabold mb-4">50+</h3>
+                        <p class="text-sm font-bold opacity-80 uppercase tracking-widest mb-4">Youth Empowered</p>
+                        <p class="text-on-secondary/80 leading-relaxed">Our SESLD program equips young mothers and youth with vocational skills for economic independence.</p>
+                    </div>
+                    <!-- Stat 4 -->
+                    <div class="bg-surface-container-highest p-10 rounded-xl flex flex-col items-center justify-center text-center">
+                        <span class="text-on-tertiary-container font-extrabold text-7xl mb-2">15+</span>
+                        <p class="font-bold text-primary">Small Businesses Launched</p>
+                    </div>
+                    <!-- Stat 5 -->
+                    <div class="md:col-span-3 bg-surface-container-lowest p-10 rounded-xl editorial-shadow flex items-center gap-12">
+                        <div class="flex-1">
+                            <h3 class="text-3xl font-bold text-primary mb-4">Mentorship and Guidance</h3>
+                            <p class="text-on-surface-variant text-lg leading-relaxed">Our school mentorship program provides students with the guidance and support they need to succeed academically and personally.</p>
+                        </div>
+                        <div class="hidden lg:block w-48 h-48 bg-secondary-container rounded-full flex items-center justify-center">
+                            <span class="material-symbols-outlined text-7xl text-on-secondary-container">groups</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Josephine's Story Section -->
+        <section class="py-32 px-8 max-w-7xl mx-auto overflow-hidden" id="stories">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-7 relative">
+                    <div class="aspect-[4/5] rounded-2xl overflow-hidden editorial-shadow transform -rotate-2">
+                        <img class="w-full h-full object-cover" src="website images/EduSave-School Mentorship/415A1535.JPG" />
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 bg-on-tertiary-container text-white p-8 rounded-xl max-w-xs editorial-shadow transform rotate-3">
+                        <span class="material-symbols-outlined text-4xl mb-4">format_quote</span>
+                        <p class="text-lg italic font-medium">"HopeRise gave me the chance to dream again. Now I can provide for my family and inspire other young women in my community."</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <span class="text-on-tertiary-container font-bold tracking-widest uppercase text-sm mb-4 block">Featured Impact Story</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-primary leading-tight mb-8">Aisha's Story: A Journey of Empowerment</h2>
+                    <div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+                        <p>
+                            Aisha, a young mother, joined our SESLD program with a desire to create a better future for her child. Through vocational training in tailoring and business management, she honed her skills and gained the confidence to launch her own small business.
+                        </p>
+                        <p>
+                            Today, Aisha runs a successful tailoring shop, providing for her family and employing two other young women from her community. Her story is a testament to the power of economic empowerment and the ripple effect it creates.
+                        </p>
+                        <div class="pt-6 border-l-4 border-on-tertiary-container pl-6 italic">
+                            "I am not just a seamstress; I am a business owner and a role model. HopeRise helped me see my own potential."
+                        </div>
+                    </div>
+                    <button class="mt-12 text-primary font-bold flex items-center gap-2 hover:gap-4 transition-all">
+                        Discover More Stories <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="py-24 px-8">
+            <div class="max-w-5xl mx-auto rounded-3xl hero-gradient p-16 text-center relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-secondary/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-on-primary mb-8 leading-tight">Be part of the next <br /> success story.</h2>
+                <p class="text-on-primary-container text-xl mb-12 max-w-2xl mx-auto">Your contribution fuels education, provides dignified housing, and builds lasting resilience for families like Josephine's.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="get-involved.html" class="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform">Join the Movement</a>
+                    <a href="get-involved.html" class="border-2 border-white/20 text-on-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-white/10 transition-colors">Partner with Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full rounded-t-[2rem] bg-emerald-50 dark:bg-emerald-950 mt-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+            <div class="space-y-6">
+                <div class="flex items-center gap-2">
+                    <img alt="HopeRise Logo" class="h-8 w-auto" src="website images/Hope-rise-top-logo.webp" />
+                    <span class="text-xl font-bold tracking-tight text-emerald-900 dark:text-emerald-50">HopeRise</span>
+                </div>
+                <p class="text-emerald-800/60 dark:text-emerald-300/60 leading-relaxed">
+                    © 2026 HopeRise. Dedicated to environmental restoration and human dignity.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-emerald-900 dark:text-emerald-50 font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-4 text-emerald-800/60 dark:text-emerald-300/60">
+                    <li><a class="hover:text-emerald-900 dark:hover:text-white transition-colors" href="programs.html">Our Programs</a></li>
+                    <li><a class="hover:text-emerald-900 dark:hover:text-white transition-colors" href="impact.html">Impact Data</a></li>
+                    <li><a class="hover:text-emerald-900 dark:hover:text-white transition-colors" href="get-involved.html">Volunteer</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-emerald-900 dark:text-emerald-50 font-bold mb-6">Resources</h4>
+                <ul class="space-y-4 text-emerald-800/60 dark:text-emerald-300/60">
+                    <li><a class="hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+                    <li><a class="hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Terms of Service</a></li>
+                    <li><a class="hover:text-emerald-900 dark:hover:text-white transition-colors" href="get-involved.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-emerald-900 dark:text-emerald-50 font-bold mb-6">Newsletter</h4>
+                <p class="text-emerald-800/60 dark:text-emerald-300/60 mb-4 text-sm">Stay updated with our latest stories and impact reports.</p>
+                <div class="flex gap-2">
+                    <input class="bg-white border-none rounded-lg flex-1 text-sm focus:ring-2 focus:ring-secondary" placeholder="Email" type="email" />
+                    <button class="bg-primary text-on-primary p-2 rounded-lg">
+                        <span class="material-symbols-outlined">send</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-8 py-8 border-t border-emerald-900/10 text-center text-emerald-800/40 text-xs">
+            HopeRise is a registered non-profit organization. All donations are tax-deductible to the extent allowed by law.
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

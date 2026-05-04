@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>HopeRise | Empowering Vulnerable Communities</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed": "#643200",
+                        "tertiary-container": "#bbd3fd",
+                        "inverse-surface": "#0b1000",
+                        "secondary-fixed": "#ffdcc4",
+                        "tertiary-dim": "#42597d",
+                        "secondary": "#955419",
+                        "surface-container-high": "#dcfb74",
+                        "on-surface": "#303d00",
+                        "surface-tint": "#336f54",
+                        "surface-dim": "#c8f31d",
+                        "on-secondary-container": "#7e4205",
+                        "on-primary-container": "#1d5c42",
+                        "on-tertiary-fixed": "#1d3557",
+                        "outline": "#708a00",
+                        "tertiary-fixed": "#bbd3fd",
+                        "primary-container": "#b1f0ce",
+                        "on-primary-fixed-variant": "#29664c",
+                        "surface": "#fbffe1",
+                        "secondary-fixed-dim": "#ffcaa4",
+                        "primary-dim": "#256348",
+                        "surface-container": "#e5ff92",
+                        "on-secondary-fixed-variant": "#8a4b11",
+                        "inverse-on-surface": "#96a369",
+                        "error-container": "#f56965",
+                        "on-tertiary-fixed-variant": "#3a5175",
+                        "tertiary": "#4e658a",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#d2f754",
+                        "background": "#fbffe1",
+                        "surface-bright": "#fbffe1",
+                        "primary": "#336f54",
+                        "on-primary": "#ffffff",
+                        "error": "#b33938",
+                        "error-dim": "#70030f",
+                        "inverse-primary": "#beffdc",
+                        "secondary-container": "#ffdcc4",
+                        "on-error-container": "#65000b",
+                        "on-primary-fixed": "#014931",
+                        "primary-fixed": "#b1f0ce",
+                        "surface-container-highest": "#d2f754",
+                        "primary-fixed-dim": "#a3e2c0",
+                        "outline-variant": "#a4c624",
+                        "surface-container-low": "#f4ffc8",
+                        "secondary-dim": "#86480d",
+                        "tertiary-fixed-dim": "#aec5ee",
+                        "on-tertiary-container": "#31486b",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#303d00",
+                        "on-surface-variant": "#576c00"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Plus Jakarta Sans"],
+                        body: ["Public Sans"],
+                        label: ["Public Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#fbffe1]/80 backdrop-blur-md dark:bg-[#303d00]/80">
+        <div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+            <a class="flex items-center gap-3 text-2xl font-bold text-[#303d00] dark:text-[#fbffe1] font-['Plus_Jakarta_Sans'] tracking-tight" href="index.html">
+                <img alt="HopeRise Logo" class="h-10 w-10 object-contain" src="website images/Hope-rise-top-logo.webp" />
+            </a>
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-gap-8 gap-8">
+                <a class="text-[#336f54] dark:text-[#dcfb74] font-bold border-b-2 border-[#336f54] dark:border-[#dcfb74] pb-1 font-['Plus_Jakarta_Sans'] tracking-tight" href="index.html">Home</a>
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="about.html">About Us</a>
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="programs.html">Programs</a>
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="impact.html">Impact</a>
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="get-involved.html">Get Involved</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="hidden md:block px-6 py-2 rounded-full border border-primary text-primary font-semibold active:scale-95 transition-transform hover:bg-primary/5">Volunteer</button>
+                <button class="px-6 py-2 rounded-full bg-primary text-on-primary font-bold active:scale-95 transition-transform shadow-lg shadow-primary/20">Donate</button>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header class="relative min-h-[921px] flex items-center pt-20 px-8 overflow-hidden bg-surface">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 z-10">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant text-sm font-bold tracking-widest uppercase mb-6">UGANDA'S RESILIENT SPIRIT</span>
+                <h1 class="text-6xl md:text-7xl font-extrabold text-on-surface leading-[1.1] tracking-tight mb-8">
+                    To awaken, inspire, and <span class="text-primary italic">empower</span> vulnerable communities.
+                </h1>
+                <p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl mb-10 leading-relaxed">
+                    Dedicated to uplifting those living with HIV/AIDS and fostering sustainable growth through education, health, and economic adaptation.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="px-10 py-4 rounded-full bg-primary text-on-primary text-lg font-bold shadow-2xl shadow-primary/30 active:scale-95 transition-transform">Support Our Mission</button>
+                    <a href="impact.html" class="px-10 py-4 rounded-full bg-secondary-container text-on-secondary-container text-lg font-bold active:scale-95 transition-transform flex items-center justify-center gap-2">
+                        View Our Impact <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+            <div class="lg:col-span-5 relative">
+                <div class="absolute -top-20 -right-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
+                <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl transform rotate-3">
+                    <img alt="Smiling Ugandan child in a classroom" class="w-full aspect-[4/5] object-cover" src="website images/EduSave-School Mentorship/415A1618.JPG" />
+                </div>
+                <div class="absolute -bottom-8 -left-8 bg-surface-container-high p-8 rounded-3xl shadow-xl max-w-[240px] transform -rotate-3">
+                    <div class="text-4xl font-black text-secondary mb-1">700+</div>
+                    <p class="text-on-surface font-semibold text-sm leading-tight">Reached with Medical Services</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Programs Grid -->
+    <section class="py-24 px-8 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 text-center max-w-3xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-on-surface mb-6">Our Core Pillars</h2>
+                <p class="text-lg text-on-surface-variant">Through four interconnected programs, we address the root causes of vulnerability and build a tapestry of hope.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Program 1: HACS -->
+                <div class="group bg-surface rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col items-start border-b-4 border-transparent hover:border-primary">
+                    <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">favorite</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">HACS</h3>
+                    <p class="text-on-surface-variant mb-6 text-sm leading-relaxed">HIV/AIDS Care & Support: Providing medical outreach, counseling, and nutritional support to patients and their families.</p>
+                    <a class="mt-auto text-primary font-bold inline-flex items-center gap-2 group/btn" href="programs.html">
+                        Learn More <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
+                    </a>
+                </div>
+                <!-- Program 2: EduSave -->
+                <div class="group bg-surface rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col items-start border-b-4 border-transparent hover:border-secondary">
+                    <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">school</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">EduSave</h3>
+                    <p class="text-on-surface-variant mb-6 text-sm leading-relaxed">Securing futures through educational grants, scholastic materials, and vocational training for orphaned youth.</p>
+                    <a class="mt-auto text-secondary font-bold inline-flex items-center gap-2 group/btn" href="programs.html">
+                        Learn More <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
+                    </a>
+                </div>
+                <!-- Program 3: SESLD -->
+                <div class="group bg-surface rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col items-start border-b-4 border-transparent hover:border-tertiary">
+                    <div class="w-14 h-14 rounded-2xl bg-tertiary/10 flex items-center justify-center text-tertiary mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">trending_up</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">SESLD</h3>
+                    <p class="text-on-surface-variant mb-6 text-sm leading-relaxed">Socio-Economic Sustainable Livelihood: Empowering families with micro-loans and business management skills.</p>
+                    <a class="mt-auto text-tertiary font-bold inline-flex items-center gap-2 group/btn" href="programs.html">
+                        Learn More <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
+                    </a>
+                </div>
+                <!-- Program 4: EcoAdapt -->
+                <div class="group bg-surface rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col items-start border-b-4 border-transparent hover:border-outline">
+                    <div class="w-14 h-14 rounded-2xl bg-outline/10 flex items-center justify-center text-outline mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">eco</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">EcoAdapt</h3>
+                    <p class="text-on-surface-variant mb-6 text-sm leading-relaxed">Climate resilience training for smallholder farmers to ensure food security in changing environments.</p>
+                    <a class="mt-auto text-outline font-bold inline-flex items-center gap-2 group/btn" href="programs.html">
+                        Learn More <span class="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_right_alt</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Director's Message -->
+        <!-- Director's Message -->
+    <section class="py-24 px-8 bg-surface overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute -top-6 -left-6 w-24 h-24 bg-primary rounded-full z-0 opacity-20"></div>
+                    <div class="relative z-10 rounded-[3rem] overflow-hidden">
+                        <img alt="Founding Director Josephine Namukasa" class="w-full h-[600px] object-cover" src="website images/HOPERISE XUL VISIT/IMG20250201164840.jpg" />
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-12 h-px bg-primary"></div>
+                        <span class="font-bold text-primary uppercase tracking-widest text-sm">Our Leadership</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-on-surface mb-8 leading-tight">A Message from the Founding Director</h2>
+                    <div class="space-y-6 text-xl text-on-surface-variant leading-relaxed">
+                        <p class="italic font-medium text-on-surface">"Hope is not a passive state, but a dynamic force we build together."</p>
+                        <p>For over a decade, HopeRise has been more than an organization; it’s been a sanctuary. We started with a simple belief: that no person living with HIV/AIDS should walk their journey alone, and no child should lose their future to poverty.</p>
+                        <p>Our work in Uganda is about weaving resilience into the daily fabric of our communities. Every donation is a thread, and every volunteer is a pair of hands helping us create a tapestry of sustainable growth and dignity.</p>
+                    </div>
+                    <div class="mt-12">
+                        <p class="font-black text-2xl text-on-surface">Josephine Namukasa</p>
+                        <p class="text-on-surface-variant font-medium">Founder & Executive Director</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Vision and Mission Section -->
+    <section class="py-24 px-8 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-extrabold text-on-surface mb-6">Our Vision</h2>
+                <p class="text-xl text-on-surface-variant leading-relaxed mb-12">A transformed and empowered community free of poverty, ignorance, and disease.</p>
+                <img src="website images/HOPERISE XUL VISIT/IMG20250201164442.jpg" alt="Community members working together" class="rounded-3xl shadow-lg w-full object-cover aspect-video">
+            </div>
+            <div>
+                <img src="website images/SKILLING/415A1861.JPG" alt="Students in a classroom" class="rounded-3xl shadow-lg w-full object-cover aspect-video mb-12">
+                <h2 class="text-4xl font-extrabold text-on-surface mb-6">Our Mission</h2>
+                <p class="text-xl text-on-surface-variant leading-relaxed">To awaken, inspire, and empower vulnerable communities for sustainable growth and development.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Core Values Section -->
+    <section class="py-24 px-8 bg-surface">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-5xl font-extrabold text-on-surface mb-6">Our Core Values</h2>
+                <p class="text-lg text-on-surface-variant">These principles guide every action we take and every decision we make.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-surface-container p-8 rounded-3xl text-center">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4">favorite</span>
+                    <h3 class="text-2xl font-bold mb-2">God-fearing</h3>
+                </div>
+                <div class="bg-surface-container p-8 rounded-3xl text-center">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4">shield</span>
+                    <h3 class="text-2xl font-bold mb-2">Integrity</h3>
+                </div>
+                <div class="bg-surface-container p-8 rounded-3xl text-center">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4">volunteer_activism</span>
+                    <h3 class="text-2xl font-bold mb-2">Love</h3>
+                </div>
+                <div class="bg-surface-container p-8 rounded-3xl text-center">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4">groups</span>
+                    <h3 class="text-2xl font-bold mb-2">Teamwork</h3>
+                </div>
+                <div class="bg-surface-container p-8 rounded-3xl text-center">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4">handshake</span>
+                    <h3 class="text-2xl font-bold mb-2">Volunteerism</h3>
+                </div>
+                <div class="bg-surface-container p-8 rounded-3xl text-center">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-4">receipt_long</span>
+                    <h3 class="text-2xl font-bold mb-2">Accountability</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-[#f4ffc8] dark:bg-[#1a2000] w-full rounded-t-[2rem] mt-20">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 w-full max-w-7xl mx-auto">
+            <div class="space-y-6">
+                <div class="flex items-center gap-3">
+                    <img alt="HopeRise Logo" class="h-10 w-10 object-contain" src="website images/Hope-rise-top-logo.webp" />
+                    <h3 class="text-xl font-black text-[#303d00] dark:text-[#fbffe1] font-['Plus_Jakarta_Sans']">HopeRise</h3>
+                </div>
+                <p class="text-[#303d00] dark:text-[#fbffe1] opacity-80 font-['Public_Sans'] text-sm leading-relaxed">
+                    Building resilient communities across Uganda through hope, empowerment, and sustainable action.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+                        <span class="material-symbols-outlined">public</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+                        <span class="material-symbols-outlined">mail</span>
+                    </a>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-bold text-[#336f54] dark:text-[#dcfb74]">Quick Links</h4>
+                <ul class="space-y-3 font-['Public_Sans'] text-sm">
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:translate-x-1 hover:text-[#336f54] transition-all block" href="about.html">History</a></li>
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:translate-x-1 hover:text-[#336f54] transition-all block" href="programs.html">HACS Program</a></li>
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:translate-x-1 hover:text-[#336f54] transition-all block" href="programs.html">EduSave</a></li>
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:translate-x-1 hover:text-[#336f54] transition-all block" href="impact.html">Josephine's Story</a></li>
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:translate-x-1 hover:text-[#336f54] transition-all block" href="get-involved.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-bold text-[#336f54] dark:text-[#dcfb74]">Our Impact</h4>
+                <div class="space-y-4">
+                    <div class="bg-surface/50 p-4 rounded-xl">
+                        <div class="text-2xl font-bold text-secondary">2,400+</div>
+                        <p class="text-xs text-on-surface-variant uppercase font-bold tracking-wider">Students Sponsored</p>
+                    </div>
+                    <div class="bg-surface/50 p-4 rounded-xl">
+                        <div class="text-2xl font-bold text-primary">85%</div>
+                        <p class="text-xs text-on-surface-variant uppercase font-bold tracking-wider">Farmer Income Growth</p>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-bold text-[#336f54] dark:text-[#dcfb74]">Newsletter</h4>
+                <p class="text-[#303d00] dark:text-[#fbffe1] opacity-80 font-['Public_Sans'] text-sm">Subscribe to receive updates on our community projects.</p>
+                <div class="flex flex-col gap-2">
+                    <input class="bg-white/50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#336f54]" placeholder="Your email" type="email" />
+                    <button class="bg-[#336f54] text-white py-3 rounded-xl font-bold text-sm active:scale-95 transition-transform">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-12 pb-12 pt-8 border-t border-[#303d00]/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#303d00]/60">
+            <p>© 2026 HopeRise for Vulnerable Communities Uganda. All rights reserved.</p>
+            <div class="flex gap-8">
+                <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
