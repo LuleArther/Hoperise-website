@@ -106,7 +106,7 @@
                 <a class="text-emerald-800/70 dark:text-emerald-200/70 font-medium hover:text-emerald-600 dark:hover:text-emerald-300 transition-all duration-300" href="get-involved.html">Get Involved</a>
             </div>
             <div class="flex items-center gap-4">
-                <button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-bold active:scale-95 transition-transform">Donate</button>
+                <a href="donate.html" class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-bold active:scale-95 transition-transform">Donate</a>
             </div>
         </div>
     </nav>
@@ -295,21 +295,28 @@
                 </ul>
             </div>
             <div>
-                <h4 class="text-emerald-900 dark:text-emerald-50 font-bold mb-6">Resources</h4>
-                <ul class="space-y-4 text-emerald-800/60 dark:text-emerald-300/60">
-                    <li><a class="hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Privacy Policy</a></li>
-                    <li><a class="hover:text-emerald-900 dark:hover:text-white transition-colors" href="#">Terms of Service</a></li>
-                    <li><a class="hover:text-emerald-900 dark:hover:text-white transition-colors" href="get-involved.html">Contact Us</a></li>
+                <h4 class="text-emerald-900 dark:text-emerald-50 font-bold mb-6">Contact Us</h4>
+                <ul class="space-y-3 text-sm text-emerald-800/60 dark:text-emerald-300/60">
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                        <span>Kirangira Village, Nama subcounty-Mukono District, Plot 314, Valentine Medical Centre, opposite the Kirangira Catholic Church.</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-base">mail</span>
+                        <a href="mailto:hoperiseuganda@gmail.com" class="hover:text-emerald-900 dark:hover:text-white transition-colors">hoperiseuganda@gmail.com</a>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">phone</span>
+                        <span><a href="tel:+256773907882" class="hover:text-emerald-900 dark:hover:text-white transition-colors block">+256773907882</a><a href="tel:+256778576374" class="hover:text-emerald-900 dark:hover:text-white transition-colors block">+256778576374</a></span>
+                    </li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-emerald-900 dark:text-emerald-50 font-bold mb-6">Newsletter</h4>
                 <p class="text-emerald-800/60 dark:text-emerald-300/60 mb-4 text-sm">Stay updated with our latest stories and impact reports.</p>
-                <div class="flex gap-2">
-                    <input class="bg-white border-none rounded-lg flex-1 text-sm focus:ring-2 focus:ring-secondary" placeholder="Email" type="email" />
-                    <button class="bg-primary text-on-primary p-2 rounded-lg">
-                        <span class="material-symbols-outlined">send</span>
-                    </button>
+                <div class="flex flex-col gap-2">
+                    <input id="footer-newsletter-impact" class="bg-white border-none rounded-lg flex-1 text-sm focus:ring-2 focus:ring-secondary p-3" placeholder="Email" type="email" />
+                    <button onclick="subscribeNewsletter('footer-newsletter-impact')" class="bg-primary text-on-primary p-3 rounded-lg font-bold text-sm active:scale-95 transition-transform">Subscribe</button>
                 </div>
             </div>
         </div>
