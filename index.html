@@ -107,7 +107,25 @@
             </div>
             <div class="flex items-center gap-4">
                 <a href="https://forms.gle/GFTeqpy48r8eHrxf6" target="_blank" rel="noopener noreferrer" class="hidden md:block px-6 py-2 rounded-full border border-primary text-primary font-semibold active:scale-95 transition-transform hover:bg-primary/5">Volunteer</a>
-                <a href="donate.html" class="px-6 py-2 rounded-full bg-primary text-on-primary font-bold active:scale-95 transition-transform shadow-lg shadow-primary/20">Donate</a>
+                <a href="donate.html" class="hidden md:block px-6 py-2 rounded-full bg-primary text-on-primary font-bold active:scale-95 transition-transform shadow-lg shadow-primary/20">Donate</a>
+                <!-- Mobile Hamburger -->
+                <button onclick="toggleMobileNav()" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-[#336f54]/10 text-[#336f54]" aria-label="Toggle menu">
+                    <span class="material-symbols-outlined" id="mobile-nav-icon">menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Nav Panel -->
+        <div id="mobile-nav" class="md:hidden bg-[#fbffe1]/98 backdrop-blur-lg border-t border-[#336f54]/10 shadow-xl">
+            <div class="px-8 py-6 flex flex-col gap-1">
+                <a href="index.html" class="py-3 px-4 rounded-xl font-bold text-[#336f54] bg-[#336f54]/5">Home</a>
+                <a href="about.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">About Us</a>
+                <a href="programs.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">Programs</a>
+                <a href="impact.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">Impact</a>
+                <a href="get-involved.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">Get Involved</a>
+                <div class="flex flex-col gap-3 mt-4 pt-4 border-t border-[#336f54]/10">
+                    <a href="https://forms.gle/GFTeqpy48r8eHrxf6" target="_blank" rel="noopener noreferrer" class="py-3 px-6 rounded-full border border-[#336f54] text-[#336f54] font-bold text-center active:scale-95 transition-transform">Volunteer</a>
+                    <a href="donate.html" class="py-3 px-6 rounded-full bg-[#336f54] text-white font-bold text-center active:scale-95 transition-transform">Donate</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -115,21 +133,21 @@
     <header class="relative min-h-[921px] flex items-center pt-20 px-8 overflow-hidden bg-surface">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div class="lg:col-span-7 z-10">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant text-sm font-bold tracking-widest uppercase mb-6">UGANDA'S RESILIENT SPIRIT</span>
-                <h1 class="text-6xl md:text-7xl font-extrabold text-on-surface leading-[1.1] tracking-tight mb-8">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-surface-container text-on-surface-variant text-sm font-bold tracking-widest uppercase mb-6 fade-up">UGANDA'S RESILIENT SPIRIT</span>
+                <h1 class="text-6xl md:text-7xl font-extrabold text-on-surface leading-[1.1] tracking-tight mb-8 fade-up anim-delay-1">
                     To awaken, inspire, and <span class="text-primary italic">empower</span> vulnerable communities.
                 </h1>
-                <p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl mb-10 leading-relaxed">
+                <p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl mb-10 leading-relaxed fade-up anim-delay-2">
                     Dedicated to uplifting those living with HIV/AIDS and fostering sustainable growth through education, health, and economic adaptation.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4">
+                <div class="flex flex-col sm:flex-row gap-4 fade-up anim-delay-3">
                     <a href="donate.html" class="px-10 py-4 rounded-full bg-primary text-on-primary text-lg font-bold shadow-2xl shadow-primary/30 active:scale-95 transition-transform">Support Our Mission</a>
                     <a href="impact.html" class="px-10 py-4 rounded-full bg-secondary-container text-on-secondary-container text-lg font-bold active:scale-95 transition-transform flex items-center justify-center gap-2">
                         View Our Impact <span class="material-symbols-outlined">arrow_forward</span>
                     </a>
                 </div>
             </div>
-            <div class="lg:col-span-5 relative">
+            <div class="lg:col-span-5 relative fade-right anim-delay-2">
                 <div class="absolute -top-20 -right-20 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
                 <div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl transform rotate-3">
                     <img alt="Smiling Ugandan child in a classroom" class="w-full aspect-[4/5] object-cover" src="website images/415A1661.JPG"/>
@@ -144,13 +162,13 @@
     <!-- Programs Grid -->
     <section class="py-24 px-8 bg-surface-container-low">
         <div class="max-w-7xl mx-auto">
-            <div class="mb-16 text-center max-w-3xl mx-auto">
+            <div class="mb-16 text-center max-w-3xl mx-auto fade-up">
                 <h2 class="text-4xl md:text-5xl font-extrabold text-on-surface mb-6">Our Core Pillars</h2>
                 <p class="text-lg text-on-surface-variant">Through four interconnected programs, we address the root causes of vulnerability and build a tapestry of hope.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Program 1: HACS -->
-                <div class="group bg-surface rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col items-start border-b-4 border-transparent hover:border-primary">
+                <div class="group bg-surface rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col items-start border-b-4 border-transparent hover:border-primary fade-up anim-delay-1">
                     <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                         <span class="material-symbols-outlined text-3xl">favorite</span>
                     </div>
@@ -161,7 +179,7 @@
                     </a>
                 </div>
                 <!-- Program 2: EduSave -->
-                <div class="group bg-surface rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col items-start border-b-4 border-transparent hover:border-secondary">
+                <div class="group bg-surface rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col items-start border-b-4 border-transparent hover:border-secondary fade-up anim-delay-2">
                     <div class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
                         <span class="material-symbols-outlined text-3xl">school</span>
                     </div>
@@ -172,7 +190,7 @@
                     </a>
                 </div>
                 <!-- Program 3: SESLD -->
-                <div class="group bg-surface rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col items-start border-b-4 border-transparent hover:border-tertiary">
+                <div class="group bg-surface rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col items-start border-b-4 border-transparent hover:border-tertiary fade-up anim-delay-3">
                     <div class="w-14 h-14 rounded-2xl bg-tertiary/10 flex items-center justify-center text-tertiary mb-6 group-hover:scale-110 transition-transform">
                         <span class="material-symbols-outlined text-3xl">trending_up</span>
                     </div>
@@ -183,7 +201,7 @@
                     </a>
                 </div>
                 <!-- Program 4: EcoAdapt -->
-                <div class="group bg-surface rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col items-start border-b-4 border-transparent hover:border-outline">
+                <div class="group bg-surface rounded-[2rem] p-8 shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col items-start border-b-4 border-transparent hover:border-outline fade-up anim-delay-4">
                     <div class="w-14 h-14 rounded-2xl bg-outline/10 flex items-center justify-center text-outline mb-6 group-hover:scale-110 transition-transform">
                         <span class="material-symbols-outlined text-3xl">eco</span>
                     </div>
@@ -201,13 +219,13 @@
     <section class="py-24 px-8 bg-surface overflow-hidden">
         <div class="max-w-7xl mx-auto">
             <div class="flex flex-col lg:flex-row gap-16 items-center">
-                <div class="lg:w-1/2 relative">
+                <div class="lg:w-1/2 relative fade-left">
                     <div class="absolute -top-6 -left-6 w-24 h-24 bg-primary rounded-full z-0 opacity-20"></div>
                     <div class="relative z-10 rounded-[3rem] overflow-hidden">
                         <img alt="Co-founder Mukasa" class="w-full h-[600px] object-cover" src="website images/mukasa enhanced.png" />
                     </div>
                 </div>
-                <div class="lg:w-1/2">
+                <div class="lg:w-1/2 fade-right">
                     <div class="flex items-center gap-4 mb-8">
                         <div class="w-12 h-px bg-primary"></div>
                         <span class="font-bold text-primary uppercase tracking-widest text-sm">Our Leadership</span>
@@ -229,12 +247,12 @@
     <!-- Vision and Mission Section -->
     <section class="py-24 px-8 bg-surface-container-low">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div>
+            <div class="fade-left">
                 <h2 class="text-4xl font-extrabold text-on-surface mb-6">Our Vision</h2>
                 <p class="text-xl text-on-surface-variant leading-relaxed mb-12">A transformed and empowered community free of poverty, ignorance, and disease.</p>
                 <img src="website images/415A1644.JPG" alt="Community members working together" class="rounded-3xl shadow-lg w-full object-cover aspect-video">
             </div>
-            <div>
+            <div class="fade-right">
                 <img src="website images/415A1529.JPG" alt="Students in a classroom" class="rounded-3xl shadow-lg w-full object-cover aspect-video mb-12">
                 <h2 class="text-4xl font-extrabold text-on-surface mb-6">Our Mission</h2>
                 <p class="text-xl text-on-surface-variant leading-relaxed">To awaken, inspire, and empower vulnerable communities for sustainable growth and development.</p>
@@ -244,12 +262,12 @@
     <!-- Core Values Section -->
     <section class="py-24 px-8 bg-surface">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
                 <h2 class="text-5xl font-extrabold text-on-surface mb-6">Our Core Values</h2>
                 <p class="text-lg text-on-surface-variant">These principles guide every action we take and every decision we make.</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-surface-container p-8 rounded-3xl text-center">
+                <div class="bg-surface-container p-8 rounded-3xl text-center fade-up anim-delay-1">
                     <span class="material-symbols-outlined text-4xl text-primary mb-4">favorite</span>
                     <h3 class="text-2xl font-bold mb-2">God-fearing</h3>
                 </div>

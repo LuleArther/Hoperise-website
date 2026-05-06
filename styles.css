@@ -39,3 +39,41 @@ h6 {
 .no-scrollbar::-webkit-scrollbar {
     display: none;
 }
+
+/* ─── Scroll entrance animations ─────────────────────────────── */
+.fade-up,
+.fade-left,
+.fade-right {
+    opacity: 0;
+    transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fade-up    { transform: translateY(36px); }
+.fade-left  { transform: translateX(-36px); }
+.fade-right { transform: translateX(36px); }
+
+.fade-up.in-view,
+.fade-left.in-view,
+.fade-right.in-view {
+    opacity: 1;
+    transform: none;
+}
+
+.anim-delay-1 { transition-delay: 0.10s; }
+.anim-delay-2 { transition-delay: 0.20s; }
+.anim-delay-3 { transition-delay: 0.30s; }
+.anim-delay-4 { transition-delay: 0.40s; }
+.anim-delay-5 { transition-delay: 0.50s; }
+
+/* ─── Mobile navigation panel ────────────────────────────────── */
+#mobile-nav {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 0.3s ease;
+}
+#mobile-nav.open {
+    max-height: 560px;
+    opacity: 1;
+}

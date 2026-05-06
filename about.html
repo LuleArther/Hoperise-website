@@ -102,7 +102,25 @@
             </div>
             <div class="flex items-center gap-4">
                 <a href="https://forms.gle/GFTeqpy48r8eHrxf6" target="_blank" rel="noopener noreferrer" class="hidden md:block px-6 py-2 rounded-full border border-primary text-primary font-semibold active:scale-95 transition-transform hover:bg-primary/5">Volunteer</a>
-                <a href="donate.html" class="px-6 py-2 rounded-full bg-primary text-on-primary font-bold active:scale-95 transition-transform shadow-lg shadow-primary/20">Donate</a>
+                <a href="donate.html" class="hidden md:block px-6 py-2 rounded-full bg-primary text-on-primary font-bold active:scale-95 transition-transform shadow-lg shadow-primary/20">Donate</a>
+                <!-- Mobile Hamburger -->
+                <button onclick="toggleMobileNav()" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-[#336f54]/10 text-[#336f54]" aria-label="Toggle menu">
+                    <span class="material-symbols-outlined" id="mobile-nav-icon">menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Nav Panel -->
+        <div id="mobile-nav" class="md:hidden bg-[#fbffe1]/98 backdrop-blur-lg border-t border-[#336f54]/10 shadow-xl">
+            <div class="px-8 py-6 flex flex-col gap-1">
+                <a href="index.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">Home</a>
+                <a href="about.html" class="py-3 px-4 rounded-xl font-bold text-[#336f54] bg-[#336f54]/5">About Us</a>
+                <a href="programs.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">Programs</a>
+                <a href="impact.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">Impact</a>
+                <a href="get-involved.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">Get Involved</a>
+                <div class="flex flex-col gap-3 mt-4 pt-4 border-t border-[#336f54]/10">
+                    <a href="https://forms.gle/GFTeqpy48r8eHrxf6" target="_blank" rel="noopener noreferrer" class="py-3 px-6 rounded-full border border-[#336f54] text-[#336f54] font-bold text-center active:scale-95 transition-transform">Volunteer</a>
+                    <a href="donate.html" class="py-3 px-6 rounded-full bg-[#336f54] text-white font-bold text-center active:scale-95 transition-transform">Donate</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -110,7 +128,7 @@
         <!-- Hero Journey -->
         <section class="max-w-7xl mx-auto px-8 mb-32">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="space-y-8">
+                <div class="space-y-8 fade-up">
                     <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-wider">
                         Our History
                     </span>
@@ -121,7 +139,7 @@
                         HopeRise, initially the ‘Hope for a Child’s Sanctuary’ (HACS) program, was founded in 2019 by a compassionate and dedicated social worker out of a deep-seated desire to address the pressing needs of vulnerable children and families in the community.
                     </p>
                 </div>
-                <div class="relative group">
+                <div class="relative group fade-right">
                     <div class="absolute -inset-4 bg-secondary-container/20 rounded-[2rem] blur-2xl group-hover:bg-secondary-container/30 transition-colors duration-500"></div>
                     <img alt="Group of children smiling" class="relative rounded-[2rem] object-cover aspect-[4/3] ambient-shadow" src="website images/IMG20250201164354.jpg" />
                 </div>
@@ -132,8 +150,8 @@
             <div class="max-w-7xl mx-auto px-8">
                 <div class="flex flex-col gap-32">
                     <!-- 2019: The Seed -->
-                    <div class="grid md:grid-cols-12 gap-8 items-start">
-                        <div class="md:col-span-4 sticky top-32">
+                    <div class="grid md:grid-cols-12 gap-8 items-start fade-up">
+                        <div class="md:col-span-4 md:sticky top-32">
                             <h2 class="text-8xl font-black text-primary/10">2019</h2>
                             <h3 class="text-3xl font-bold text-primary mt-[-2rem]">The Seed is Planted</h3>
                             <p class="mt-4 text-on-surface-variant">What began as the ‘Hope for a Child’s Sanctuary’ (HACS) program started with supporting just one household, providing essential support to a family of seven. This single act of compassion laid the foundation for our future growth.</p>
@@ -153,7 +171,7 @@
                         </div>
                     </div>
                     <!-- 2021: Roots Deepen -->
-                    <div class="grid md:grid-cols-12 gap-8 items-start">
+                    <div class="grid md:grid-cols-12 gap-8 items-start fade-up">
                         <div class="md:col-span-8 order-2 md:order-1">
                             <div class="grid grid-cols-2 gap-4">
                                 <img alt="Community meeting" class="rounded-xl object-cover h-64 w-full" src="website images/415A1874.JPG" />
@@ -167,8 +185,8 @@
                         </div>
                     </div>
                     <!-- Today: The Living Sanctuary -->
-                    <div class="grid md:grid-cols-12 gap-8 items-start">
-                        <div class="md:col-span-4 sticky top-32">
+                    <div class="grid md:grid-cols-12 gap-8 items-start fade-up">
+                        <div class="md:col-span-4 md:sticky top-32">
                             <h2 class="text-8xl font-black text-primary/10">Today</h2>
                             <h3 class="text-3xl font-bold text-primary mt-[-2rem]">Holistic Development</h3>
                             <p class="mt-4 text-on-surface-variant">HopeRise has evolved into a comprehensive support system, offering not just aid but also vocational training, mentorship, and community-based programs aimed at fostering long-term self-sufficiency.</p>
@@ -203,27 +221,27 @@
         </section>
         <!-- Our Philosophy (Bento) -->
         <section class="max-w-7xl mx-auto px-8 mt-32">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 fade-up">
                 <h2 class="text-4xl font-extrabold text-primary mb-4">The Pillars of Our Vision</h2>
                 <div class="w-24 h-1.5 bg-secondary-container mx-auto rounded-full"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-surface-container-low p-8 rounded-xl md:col-span-2">
+                <div class="bg-surface-container-low p-8 rounded-xl md:col-span-2 fade-up anim-delay-1">
                     <span class="material-symbols-outlined text-secondary text-4xl mb-4">psychology</span>
                     <h3 class="text-2xl font-bold text-primary mb-3">Holistic Growth</h3>
                     <p class="text-on-surface-variant leading-relaxed">We believe that nourishing the body is only the first step. Our programs integrate mental well-being and community connection to ensure long-term stability and happiness for every participant.</p>
                 </div>
-                <div class="bg-secondary-container p-8 rounded-xl">
+                <div class="bg-secondary-container p-8 rounded-xl fade-up anim-delay-2">
                     <span class="material-symbols-outlined text-on-secondary-container text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">diversity_2</span>
                     <h3 class="text-2xl font-bold text-on-secondary-container mb-3">Radical Inclusivity</h3>
                     <p class="text-on-secondary-container/80 font-medium">Space for everyone, regardless of history or heritage. Our sanctuary is built on the belief that diversity is our greatest strength.</p>
                 </div>
-                <div class="bg-surface-container-highest p-8 rounded-xl">
+                <div class="bg-surface-container-highest p-8 rounded-xl fade-up anim-delay-3">
                     <span class="material-symbols-outlined text-primary text-4xl mb-4">energy_savings_leaf</span>
                     <h3 class="text-2xl font-bold text-primary mb-3">Eco-Stewardship</h3>
                     <p class="text-on-surface-variant leading-relaxed">Sustainability isn't a buzzword; it's our blueprint. We use regenerative practices in everything we touch.</p>
                 </div>
-                <div class="bg-primary text-on-primary p-8 rounded-xl md:col-span-2 flex items-center justify-between">
+                <div class="bg-primary text-on-primary p-8 rounded-xl md:col-span-2 flex items-center justify-between fade-up anim-delay-2">
                     <div class="max-w-md">
                         <h3 class="text-2xl font-bold mb-2">Join the Movement</h3>
                         <p class="text-on-primary-container">Become a part of our ongoing story. Your support helps us expand our reach to the next community in need.</p>
@@ -236,7 +254,7 @@
         </section>
         <!-- Meet Our Team -->
         <section class="max-w-7xl mx-auto px-8 mt-32">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 fade-up">
                 <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-wider mb-6">
                     Our People
                 </span>
@@ -245,7 +263,7 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Mukasa Dennis -->
-                <div class="bg-surface-container-low rounded-2xl overflow-hidden ambient-shadow flex flex-col items-center text-center">
+                <div class="bg-surface-container-low rounded-2xl overflow-hidden ambient-shadow flex flex-col items-center text-center fade-up anim-delay-1">
                     <div class="w-full aspect-square overflow-hidden">
                         <img alt="Mukasa Dennis" class="w-full h-full object-cover" src="website images/Mukasa Dennis.png" />
                     </div>
@@ -255,7 +273,7 @@
                     </div>
                 </div>
                 <!-- Senyonga Emmanuel -->
-                <div class="bg-surface-container-low rounded-2xl overflow-hidden ambient-shadow flex flex-col items-center text-center">
+                <div class="bg-surface-container-low rounded-2xl overflow-hidden ambient-shadow flex flex-col items-center text-center fade-up anim-delay-2">
                     <div class="w-full aspect-square overflow-hidden">
                         <img alt="Senyonga Emmanuel" class="w-full h-full object-cover" src="website images/Emmanuel_Senyonga.png" />
                     </div>
@@ -265,7 +283,7 @@
                     </div>
                 </div>
                 <!-- Godfrey Akol -->
-                <div class="bg-surface-container-low rounded-2xl overflow-hidden ambient-shadow flex flex-col items-center text-center">
+                <div class="bg-surface-container-low rounded-2xl overflow-hidden ambient-shadow flex flex-col items-center text-center fade-up anim-delay-3">
                     <div class="w-full aspect-square overflow-hidden">
                         <img alt="Godfrey Akol" class="w-full h-full object-cover" src="website images/Akol Godfrey.png" />
                     </div>
@@ -275,7 +293,7 @@
                     </div>
                 </div>
                 <!-- Samuel Okure -->
-                <div class="bg-surface-container-low rounded-2xl overflow-hidden ambient-shadow flex flex-col items-center text-center">
+                <div class="bg-surface-container-low rounded-2xl overflow-hidden ambient-shadow flex flex-col items-center text-center fade-up anim-delay-4">
                     <div class="w-full aspect-square overflow-hidden">
                         <img alt="Samuel Okure" class="w-full h-full object-cover" src="website images/Samuel Okure-Head of Medical Program.png" />
                     </div>
