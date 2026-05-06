@@ -1,6 +1,50 @@
 // HopeRise website script
 console.log("HopeRise website script loaded");
 
+// ─── Mobile navigation toggle ────────────────────────────────
+function toggleMobileNav() {
+    var nav = document.getElementById('mobile-nav');
+    var icon = document.getElementById('mobile-nav-icon');
+    if (!nav) return;
+    var isOpen = nav.classList.toggle('open');
+    if (icon) icon.textContent = isOpen ? 'close' : 'menu';
+}
+
+// Close mobile nav when a link inside it is clicked
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('#mobile-nav a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            var nav = document.getElementById('mobile-nav');
+            var icon = document.getElementById('mobile-nav-icon');
+            if (nav) nav.classList.remove('open');
+            if (icon) icon.textContent = 'menu';
+        });
+    });
+});
+
+// ─── Scroll entrance animations ──────────────────────────────
+(function () {
+    var els = document.querySelectorAll('.fade-up, .fade-left, .fade-right');
+    if (!els.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+        // Fallback for older browsers: show everything immediately
+        els.forEach(function (el) { el.classList.add('in-view'); });
+        return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    els.forEach(function (el) { observer.observe(el); });
+})();
+
 // Newsletter subscribe handler – used in all page footers
 function subscribeNewsletter(inputId) {
     const input = document.getElementById(inputId);
