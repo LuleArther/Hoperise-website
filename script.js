@@ -1,6 +1,10 @@
 // HopeRise website script
 console.log("HopeRise website script loaded");
 
+var SLIDER_MIN_INTERVAL = 2000;
+var SLIDER_DEFAULT_INTERVAL = 6000;
+var SLIDER_FADE_DURATION = 600;
+
 // ─── Mobile navigation toggle ────────────────────────────────
 function toggleMobileNav() {
     var nav = document.getElementById('mobile-nav');
@@ -26,7 +30,9 @@ function initImageSliders() {
         if (images.length === 1) return;
 
         var intervalAttr = parseInt(slider.getAttribute('data-image-interval'), 10);
-        var interval = Number.isFinite(intervalAttr) && intervalAttr >= 2000 ? intervalAttr : 6000;
+        var interval = Number.isFinite(intervalAttr) && intervalAttr >= SLIDER_MIN_INTERVAL
+            ? intervalAttr
+            : SLIDER_DEFAULT_INTERVAL;
 
         setInterval(function () {
             index = (index + 1) % images.length;
@@ -34,7 +40,7 @@ function initImageSliders() {
             setTimeout(function () {
                 slider.style.backgroundImage = "url('" + images[index] + "')";
                 slider.classList.remove('is-fading');
-            }, 400);
+            }, SLIDER_FADE_DURATION);
         }, interval);
     });
 }
