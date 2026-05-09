@@ -142,108 +142,85 @@
                 Our programs are designed to create lasting change by addressing the interconnected needs of the communities we serve. From education and health to economic empowerment, we provide a holistic support system.
             </p>
         </header>
-        <!-- Programs Bento Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            <!-- HACS: Health & Community Support -->
-            <div class="lg:col-span-7 group">
-                <div class="h-full bg-surface-container-low rounded-3xl overflow-hidden flex flex-col md:flex-row transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5">
-                    <div class="w-full md:w-1/2 relative h-64 md:h-auto">
-                        <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent z-10"></div>
-                        <img class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700" src="website images/415A1660.JPG" />
+        <!-- Programs (One by One) -->
+        <section class="space-y-20">
+            <!-- HACS -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="image-slider rounded-[2.5rem] shadow-2xl h-[360px] md:h-[440px]" data-image-slider="website images/415A1660.JPG|website images/415A1535.JPG|website images/415A1874.JPG"></div>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">medical_services</span>
+                        <span class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">Healthcare &amp; Sanitation</span>
                     </div>
-                    <div class="w-full md:w-1/2 p-8 md:p-10 flex flex-col justify-center">
-                        <div class="flex items-center gap-2 mb-4">
-                            <span class="material-symbols-outlined text-primary">medical_services</span>
-                            <span class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">Community Pillar</span>
-                        </div>
-                        <h2 class="text-3xl font-extrabold text-primary mb-4 tracking-tight">Hope for a Child's Sanctuary (HACS)</h2>
-                        <p class="text-on-surface-variant leading-relaxed mb-6">
-                            The HACS program is our foundational initiative, providing holistic support to vulnerable families. We offer nutritional assistance, medical outreach, and counseling to ensure that both children and their guardians have the resources to thrive.
-                        </p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3 text-sm font-medium text-on-surface">
-                                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Nutritional Support
-                            </li>
-                            <li class="flex items-center gap-3 text-sm font-medium text-on-surface">
-                                <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Medical Outreach and Counseling
-                            </li>
-                        </ul>
-                    </div>
+                    <h2 class="text-4xl font-extrabold text-primary tracking-tight">Healthcare Access &amp; Community Sanitation (HACS)</h2>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        Through Valentine Medical Centre and outreach clinics, we provide healthcare for families living with HIV/AIDS, maternal care, and treatment for common illnesses. We also train households on hygiene, nutrition, and WASH practices that prevent disease and keep children healthy.
+                    </p>
+                    <ul class="space-y-3 text-sm font-medium text-on-surface">
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Community clinic care and HIV counseling</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Medical outreach, immunisation, and family planning</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>WASH and nutrition education with VHT partners</li>
+                    </ul>
                 </div>
             </div>
-            <!-- EduSave: Education Financial Support -->
-            <div class="lg:col-span-5">
-                <div class="h-full bg-primary-container text-white rounded-3xl p-10 flex flex-col justify-between transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20">
-                    <div>
-                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-white/10 backdrop-blur mb-8">
-                            <span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">school</span>
-                        </div>
-                        <h2 class="text-4xl font-extrabold mb-4 tracking-tight">EduSave Initiative</h2>
-                        <p class="text-on-primary-container text-lg leading-relaxed mb-8">
-                            The EduSave program is dedicated to breaking the cycle of poverty through education. We provide financial support for school fees, scholastic materials, and mentorship to ensure that children can remain in school and build a foundation for a successful future.
-                        </p>
+            <!-- EduSave -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 order-2 lg:order-1">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">school</span>
+                        <span class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">Education &amp; Mentorship</span>
                     </div>
-                    <div class="space-y-6">
-                        <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
-                            <h3 class="font-bold text-white mb-2">Financial Support for Education</h3>
-                            <p class="text-sm text-on-primary-container/80">Covering school fees and providing necessary materials to keep children in school.</p>
-                        </div>
+                    <h2 class="text-4xl font-extrabold text-primary tracking-tight">EduSave Program</h2>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        EduSave identifies children who are out of school and provides fees, scholastic materials, and psychosocial support to keep them learning. We partner with EduSenga and local schools to deliver mentorship, life skills, and girl-child advocacy.
+                    </p>
+                    <ul class="space-y-3 text-sm font-medium text-on-surface">
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>School fees, uniforms, and learning materials</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Mentorship on hygiene, mental health, and leadership</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Menstrual hygiene and reproductive health awareness</li>
+                    </ul>
+                </div>
+                <div class="image-slider rounded-[2.5rem] shadow-2xl h-[360px] md:h-[440px] order-1 lg:order-2" data-image-slider="website images/Our EduSave Champions.jpeg|website images/415A1529.JPG|website images/415A1644.JPG"></div>
+            </div>
+            <!-- SESLD -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="image-slider rounded-[2.5rem] shadow-2xl h-[360px] md:h-[440px]" data-image-slider="website images/415A1804.JPG|website images/415A1770.JPG|website images/415A1336.JPG"></div>
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">work</span>
+                        <span class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">Skills &amp; Livelihoods</span>
                     </div>
+                    <h2 class="text-4xl font-extrabold text-primary tracking-tight">Self-Help Entrepreneurial Skilling &amp; Livelihoods (SESLD)</h2>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        We equip young mothers and youth with hands-on skills in tailoring, carpentry, hairdressing, and craft shoe making. Entrepreneurship training and financial literacy help participants build stable, dignified livelihoods.
+                    </p>
+                    <ul class="space-y-3 text-sm font-medium text-on-surface">
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Vocational skills for immediate income generation</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Business coaching and savings groups</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Support for teenage mothers and school dropouts</li>
+                    </ul>
                 </div>
             </div>
-            <!-- SESLD: Socio-Economic Skills & Leadership Development -->
-            <div class="lg:col-span-6">
-                <div class="bg-surface-container-highest rounded-3xl p-1 p-px transition-all duration-500 hover:shadow-xl">
-                    <div class="bg-surface-container-lowest rounded-[2.8rem] p-10 h-full">
-                        <div class="flex justify-between items-start mb-8">
-                            <div class="space-y-1">
-                                <h2 class="text-3xl font-extrabold text-primary tracking-tight">SESLD Program</h2>
-                                <p class="text-secondary font-semibold">Skilling & Empowerment</p>
-                            </div>
-                            <span class="material-symbols-outlined text-4xl text-outline-variant">work</span>
-                        </div>
-                        <p class="text-on-surface-variant leading-relaxed mb-8">
-                           The Socio-Economic Sustainable Livelihood Development (SESLD) program empowers young mothers and youth with vocational skills, financial literacy, and entrepreneurship training. Our goal is to foster economic independence and create pathways to sustainable livelihoods.
-                        </p>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="p-5 rounded-2xl bg-surface-container-low">
-                                <h4 class="text-primary font-bold text-lg mb-1">50+</h4>
-                                <p class="text-xs text-on-surface-variant uppercase tracking-wider">Youth Trained</p>
-                            </div>
-                            <div class="p-5 rounded-2xl bg-surface-container-low">
-                                <h4 class="text-primary font-bold text-lg mb-1">15+</h4>
-                                <p class="text-xs text-on-surface-variant uppercase tracking-wider">Small Businesses Started</p>
-                            </div>
-                        </div>
+            <!-- EcoAdapt -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 order-2 lg:order-1">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">eco</span>
+                        <span class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">Climate Adaptation</span>
                     </div>
+                    <h2 class="text-4xl font-extrabold text-primary tracking-tight">EcoAdapt Program</h2>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        EcoAdapt restores greenery through agroforestry and home gardens while promoting climate-smart agriculture. We also support waste management, biogas training, and recycling initiatives that generate income and protect the environment.
+                    </p>
+                    <ul class="space-y-3 text-sm font-medium text-on-surface">
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Integrated household and school gardens</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Biogas and biofertilizer training</li>
+                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Organic farming and plastic recycling</li>
+                    </ul>
                 </div>
+                <div class="image-slider rounded-[2.5rem] shadow-2xl h-[360px] md:h-[440px] order-1 lg:order-2" data-image-slider="website images/415A2051.JPG|website images/IMG20260410160930.jpg|website images/415A1644.JPG"></div>
             </div>
-            <!-- EcoAdapt: Environmental Resilience -->
-            <div class="lg:col-span-6 group">
-                <div class="h-full bg-white rounded-3xl overflow-hidden border border-outline-variant/15 flex flex-col transition-all duration-500 hover:shadow-2xl">
-                    <div class="relative h-48 overflow-hidden">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="website images/415A1336.JPG" />
-                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-white/100"></div>
-                        <div class="absolute bottom-4 left-8">
-                            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary text-white text-xs font-bold">
-                                <span class="material-symbols-outlined text-xs">eco</span> MENTORSHIP
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-10 pt-4">
-                        <h2 class="text-3xl font-extrabold text-primary mb-4 tracking-tight">School Mentorship Program</h2>
-                        <p class="text-on-surface-variant leading-relaxed mb-6">
-                            Our mentorship program connects students with experienced professionals and community leaders. Through regular guidance and support, we help students navigate their academic and personal challenges, building confidence and shaping future leaders.
-                        </p>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface text-sm font-medium">Career Guidance</span>
-                            <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface text-sm font-medium">Personal Development</span>
-                            <span class="px-4 py-2 rounded-full bg-surface-container text-on-surface text-sm font-medium">Leadership Skills</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
         <!-- Featured Section: The Holistic Model -->
         <section class="mt-32 relative rounded-[3rem] overflow-hidden bg-surface-container-low p-12 md:p-24">
             <div class="relative z-10 flex flex-col lg:flex-row items-center gap-16">

@@ -10,8 +10,38 @@ function toggleMobileNav() {
     if (icon) icon.textContent = isOpen ? 'close' : 'menu';
 }
 
+// ─── Background/image sliders ────────────────────────────────
+function initImageSliders() {
+    var sliders = document.querySelectorAll('[data-image-slider]');
+    if (!sliders.length) return;
+
+    sliders.forEach(function (slider) {
+        var data = slider.getAttribute('data-image-slider') || '';
+        var images = data.split('|').map(function (src) { return src.trim(); }).filter(Boolean);
+        if (!images.length) return;
+
+        var index = 0;
+        slider.style.backgroundImage = "url('" + images[index] + "')";
+
+        if (images.length === 1) return;
+
+        var intervalAttr = parseInt(slider.getAttribute('data-image-interval'), 10);
+        var interval = Number.isFinite(intervalAttr) && intervalAttr >= 2000 ? intervalAttr : 6000;
+
+        setInterval(function () {
+            index = (index + 1) % images.length;
+            slider.classList.add('is-fading');
+            setTimeout(function () {
+                slider.style.backgroundImage = "url('" + images[index] + "')";
+                slider.classList.remove('is-fading');
+            }, 400);
+        }, interval);
+    });
+}
+
 // Close mobile nav when a link inside it is clicked
 document.addEventListener('DOMContentLoaded', function () {
+    initImageSliders();
     document.querySelectorAll('#mobile-nav a').forEach(function (link) {
         link.addEventListener('click', function () {
             var nav = document.getElementById('mobile-nav');
