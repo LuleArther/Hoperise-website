@@ -4,6 +4,7 @@ console.log("HopeRise website script loaded");
 var SLIDER_MIN_INTERVAL = 2000;
 var SLIDER_DEFAULT_INTERVAL = 6000;
 var SLIDER_FADE_DURATION = 600;
+var sliderIntervals = [];
 
 // ─── Mobile navigation toggle ────────────────────────────────
 function toggleMobileNav() {
@@ -34,7 +35,7 @@ function initImageSliders() {
             ? intervalAttr
             : SLIDER_DEFAULT_INTERVAL;
 
-        setInterval(function () {
+        var intervalId = setInterval(function () {
             index = (index + 1) % images.length;
             slider.classList.add('is-fading');
             setTimeout(function () {
@@ -42,8 +43,13 @@ function initImageSliders() {
                 slider.classList.remove('is-fading');
             }, SLIDER_FADE_DURATION);
         }, interval);
+        sliderIntervals.push(intervalId);
     });
 }
+
+window.addEventListener('beforeunload', function () {
+    sliderIntervals.forEach(function (intervalId) { clearInterval(intervalId); });
+});
 
 // Close mobile nav when a link inside it is clicked
 document.addEventListener('DOMContentLoaded', function () {
