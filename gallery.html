@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gallery | HopeRise</title>
+    <link rel="icon" type="image/png" href="website images/Hope rise fav icon.png" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-surface text-on-surface antialiased">
+    <nav class="fixed top-0 w-full z-50 bg-[#fbffe1]/80 backdrop-blur-md dark:bg-[#303d00]/80">
+        <div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+            <a class="flex items-center gap-3 text-2xl font-bold text-[#303d00] dark:text-[#fbffe1] font-['Plus_Jakarta_Sans'] tracking-tight" href="index.html">
+                <img alt="HopeRise Logo" class="h-20 w-25 object-contain" src="website images/Hope-rise-top-logo.webp" />
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="index.html">Home</a>
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="about.html">About Us</a>
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="programs.html">Programs</a>
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="impact.html">Impact</a>
+                <a class="text-[#336f54] dark:text-[#dcfb74] font-bold border-b-2 border-[#336f54] dark:border-[#dcfb74] pb-1 font-['Plus_Jakarta_Sans'] tracking-tight" href="gallery.html">Gallery</a>
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="get-involved.html">Get Involved</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="https://forms.gle/GFTeqpy48r8eHrxf6" target="_blank" rel="noopener noreferrer" class="hidden md:block px-6 py-2 rounded-full border border-primary text-primary font-semibold active:scale-95 transition-transform hover:bg-primary/5">Volunteer</a>
+                <a href="donate.html" class="hidden md:block px-6 py-2 rounded-full bg-primary text-on-primary font-bold active:scale-95 transition-transform shadow-lg shadow-primary/20">Donate</a>
+                <button onclick="toggleMobileNav()" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-[#336f54]/10 text-[#336f54]" aria-label="Toggle menu">
+                    <span class="material-symbols-outlined" id="mobile-nav-icon">menu</span>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="md:hidden bg-[#fbffe1]/98 backdrop-blur-lg border-t border-[#336f54]/10 shadow-xl">
+            <div class="px-8 py-6 flex flex-col gap-1">
+                <a href="index.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">Home</a>
+                <a href="about.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">About Us</a>
+                <a href="programs.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">Programs</a>
+                <a href="impact.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">Impact</a>
+                <a href="gallery.html" class="py-3 px-4 rounded-xl font-bold text-[#336f54] bg-[#336f54]/5">Gallery</a>
+                <a href="get-involved.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">Get Involved</a>
+                <div class="flex flex-col gap-3 mt-4 pt-4 border-t border-[#336f54]/10">
+                    <a href="https://forms.gle/GFTeqpy48r8eHrxf6" target="_blank" rel="noopener noreferrer" class="py-3 px-6 rounded-full border border-[#336f54] text-[#336f54] font-bold text-center active:scale-95 transition-transform">Volunteer</a>
+                    <a href="donate.html" class="py-3 px-6 rounded-full bg-[#336f54] text-white font-bold text-center active:scale-95 transition-transform">Donate</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-24 px-8">
+        <section class="max-w-7xl mx-auto mb-14 text-center fade-up">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-sm font-bold tracking-wide uppercase mb-6">HopeRise in Photos</span>
+            <h1 class="text-5xl md:text-6xl font-extrabold text-on-surface mb-5">Community Gallery</h1>
+            <p class="text-lg text-on-surface-variant max-w-3xl mx-auto">A collection of moments from healthcare outreach, mentorship sessions, skills training, and environmental action in Kirangira.</p>
+        </section>
+
+        <section class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <img class="w-full h-72 object-cover rounded-2xl shadow-sm fade-up" src="website images/hacs1.jpg" alt="Community healthcare support" />
+                <img class="w-full h-72 object-cover rounded-2xl shadow-sm fade-up anim-delay-1" src="website images/Hacs2.jpg" alt="Medical outreach in the community" />
+                <img class="w-full h-72 object-cover rounded-2xl shadow-sm fade-up anim-delay-2" src="website images/Hacs5.jpg" alt="Clinic service delivery" />
+                <img class="w-full h-72 object-cover rounded-2xl shadow-sm fade-up" src="website images/edu1.jpg" alt="Students under EduSave program" />
+                <img class="w-full h-72 object-cover rounded-2xl shadow-sm fade-up anim-delay-1" src="website images/edu4.jpg" alt="School mentorship activity" />
+                <img class="w-full h-72 object-cover rounded-2xl shadow-sm fade-up anim-delay-2" src="website images/edu8.jpg" alt="Education support engagement" />
+                <img class="w-full h-72 object-cover rounded-2xl shadow-sm fade-up" src="website images/ses1.jpg" alt="Vocational skilling session" />
+                <img class="w-full h-72 object-cover rounded-2xl shadow-sm fade-up anim-delay-1" src="website images/ses4.jpg" alt="Livelihood training for youth" />
+                <img class="w-full h-72 object-cover rounded-2xl shadow-sm fade-up anim-delay-2" src="website images/ses7.jpg" alt="Entrepreneurial skills development" />
+                <img class="w-full h-72 object-cover rounded-2xl shadow-sm fade-up" src="website images/eco1.jpg" alt="EcoAdapt community garden" />
+                <img class="w-full h-72 object-cover rounded-2xl shadow-sm fade-up anim-delay-1" src="website images/eco2.jpg" alt="Environmental sustainability activity" />
+                <img class="w-full h-72 object-cover rounded-2xl shadow-sm fade-up anim-delay-2" src="website images/415A2051.JPG" alt="HopeRise community impact moment" />
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#f4ffc8] dark:bg-[#1a2000] w-full rounded-t-[2rem] mt-20">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 w-full max-w-7xl mx-auto">
+            <div class="space-y-6">
+                <div class="flex items-center gap-3">
+                    <img alt="HopeRise Logo" class="h-12 w-15 object-contain" src="website images/Hope-rise-top-logo.webp" />
+                </div>
+                <p class="text-[#303d00] dark:text-[#fbffe1] opacity-80 font-['Public_Sans'] text-sm leading-relaxed">
+                    Building resilient communities across Uganda through hope, empowerment, and sustainable action.
+                </p>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-bold text-[#336f54] dark:text-[#dcfb74]">Quick Links</h4>
+                <ul class="space-y-3 font-['Public_Sans'] text-sm">
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:text-[#336f54] transition-all block" href="about.html">History</a></li>
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:text-[#336f54] transition-all block" href="programs.html">Programs</a></li>
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:text-[#336f54] transition-all block" href="impact.html">Impact</a></li>
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:text-[#336f54] transition-all block" href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-bold text-[#336f54] dark:text-[#dcfb74]">Contact Us</h4>
+                <ul class="space-y-3 font-['Public_Sans'] text-sm text-[#303d00] dark:text-[#fbffe1] opacity-80">
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                        <span>Kirangira Village, Nama subcounty-Mukono District, Plot 314, Valentine Medical Centre, opposite the Kirangira Catholic Church.</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-base">mail</span>
+                        <a href="mailto:hoperiseuganda@gmail.com" class="hover:text-[#336f54] transition-colors">hoperiseuganda@gmail.com</a>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-base mt-0.5">phone</span>
+                        <span><a href="tel:+256773907882" class="hover:text-[#336f54] transition-colors block">+256773907882</a><a href="tel:+256778576374" class="hover:text-[#336f54] transition-colors block">+256778576374</a></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="space-y-6">
+                <h4 class="font-bold text-[#336f54] dark:text-[#dcfb74]">Newsletter</h4>
+                <p class="text-[#303d00] dark:text-[#fbffe1] opacity-80 font-['Public_Sans'] text-sm">Subscribe to receive updates on our community projects.</p>
+                <div class="flex flex-col gap-2">
+                    <input id="footer-newsletter-gallery" class="bg-white/50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#336f54]" placeholder="Your email" type="email" />
+                    <button onclick="subscribeNewsletter('footer-newsletter-gallery')" class="bg-[#336f54] text-white py-3 rounded-xl font-bold text-sm active:scale-95 transition-transform">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-12 pb-12 pt-8 border-t border-[#303d00]/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#303d00]/60">
+            <p>© 2026 HopeRise for Vulnerable Communities Uganda. All rights reserved.</p>
+            <div class="flex gap-8">
+                <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
