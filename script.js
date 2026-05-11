@@ -6,6 +6,7 @@ var SLIDER_DEFAULT_INTERVAL = 6000;
 var SLIDER_FADE_DURATION = 600;
 var CAROUSEL_SWIPE_THRESHOLD = 40;
 var ECO_AUTO_IMAGE_MAX_INDEX = 20;
+var ECO_IMAGE_BASE_PATH = 'website images/';
 var ECO_AUTO_IMAGE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'webp', 'JPG', 'JPEG', 'PNG', 'WEBP'];
 var sliderIntervals = [];
 var carouselIntervals = [];
@@ -77,52 +78,56 @@ function initProgramCarousels() {
             return (img.getAttribute('src') || '').toLowerCase().trim();
         });
 
-        var checks = [];
-        for (var i = 1; i <= ECO_AUTO_IMAGE_MAX_INDEX; i++) {
-            (function (imageNumber) {
-                checks.push(new Promise(function (resolve) {
-                    var foundSrc = null;
-                    var extIndex = 0;
+        function findEcoImageByNumber(imageNumber) {
+            var extIndex = 0;
 
-                    function checkNextExtension() {
-                        if (extIndex >= ECO_AUTO_IMAGE_EXTENSIONS.length) {
-                            resolve({ imageNumber: imageNumber, src: foundSrc });
-                            return;
-                        }
-
-                        var extension = ECO_AUTO_IMAGE_EXTENSIONS[extIndex++];
-                        var candidateSrc = 'website images/eco' + imageNumber + '.' + extension;
-                        if (existingKeys.indexOf(candidateSrc.toLowerCase()) !== -1) {
-                            resolve({ imageNumber: imageNumber, src: null });
-                            return;
-                        }
-
-                        imageExists(candidateSrc).then(function (exists) {
-                            if (exists) {
-                                foundSrc = candidateSrc;
-                                resolve({ imageNumber: imageNumber, src: foundSrc });
-                                return;
-                            }
-                            checkNextExtension();
-                        });
+            return new Promise(function (resolve) {
+                function checkNextExtension() {
+                    if (extIndex >= ECO_AUTO_IMAGE_EXTENSIONS.length) {
+                        resolve(null);
+                        return;
                     }
 
-                    checkNextExtension();
-                }));
+                    var extension = ECO_AUTO_IMAGE_EXTENSIONS[extIndex++];
+                    var candidateSrc = ECO_IMAGE_BASE_PATH + 'eco' + imageNumber + '.' + extension;
+                    if (existingKeys.indexOf(candidateSrc.toLowerCase()) !== -1) {
+                        resolve(null);
+                        return;
+                    }
+
+                    imageExists(candidateSrc).then(function (exists) {
+                        if (exists) {
+                            resolve(candidateSrc);
+                            return;
+                        }
+                        checkNextExtension();
+                    });
+                }
+
+                checkNextExtension();
+            });
+        }
+
+        var discoveredImages = [];
+        var queue = Promise.resolve();
+        for (var i = 1; i <= ECO_AUTO_IMAGE_MAX_INDEX; i++) {
+            (function (imageNumber) {
+                queue = queue.then(function () {
+                    return findEcoImageByNumber(imageNumber).then(function (src) {
+                        if (src) discoveredImages.push({ imageNumber: imageNumber, src: src });
+                    });
+                });
             })(i);
         }
 
-        return Promise.all(checks).then(function (results) {
-            results
-                .filter(function (result) { return !!result.src; })
-                .sort(function (a, b) { return a.imageNumber - b.imageNumber; })
-                .forEach(function (result, index) {
+        return queue.then(function () {
+            discoveredImages.forEach(function (result) {
                     var slide = document.createElement('div');
                     slide.className = 'program-carousel-slide';
 
                     var image = document.createElement('img');
                     image.src = result.src;
-                    image.alt = 'EcoAdapt environmental activity ' + (existingSlides.length + index + 1);
+                    image.alt = 'EcoAdapt environmental activity ' + result.imageNumber;
                     image.loading = 'lazy';
 
                     slide.appendChild(image);
