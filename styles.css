@@ -32,6 +32,10 @@ h6 {
     box-shadow: 0 32px 64px -12px rgba(1, 45, 29, 0.06);
 }
 
+.editorial-shadow {
+    box-shadow: 0 32px 64px -12px rgba(1, 45, 29, 0.06);
+}
+
 .text-editorial {
     letter-spacing: -0.02em;
 }

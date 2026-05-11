@@ -6,7 +6,7 @@
     <title>Impact & Stories | HopeRise</title>
     <link rel="icon" type="image/png" href="website images/Hope rise fav icon.png" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
     <script>
         tailwind.config = {
@@ -14,64 +14,68 @@
             theme: {
                 extend: {
                     colors: {
-                        "on-primary": "#ffffff",
-                        "surface-variant": "#e0e3e5",
-                        "secondary-container": "#a4f792",
-                        "tertiary-container": "#7e0017",
-                        "tertiary-fixed-dim": "#ffb3b1",
-                        "on-secondary-fixed-variant": "#005303",
-                        "primary-container": "#1b4332",
-                        "surface-tint": "#3f6653",
-                        "surface-container-lowest": "#ffffff",
-                        "inverse-on-surface": "#eff1f3",
-                        "on-primary-fixed": "#002114",
-                        "primary-fixed": "#c1ecd4",
-                        "secondary-fixed-dim": "#89da79",
-                        "error-container": "#ffdad6",
-                        "on-tertiary-container": "#ff8080",
+                        "on-secondary-fixed": "#643200",
+                        "tertiary-container": "#bbd3fd",
+                        "inverse-surface": "#0b1000",
+                        "secondary-fixed": "#ffdcc4",
+                        "tertiary-dim": "#42597d",
+                        "secondary": "#955419",
+                        "surface-container-high": "#dcfb74",
+                        "on-surface": "#303d00",
+                        "surface-tint": "#336f54",
+                        "surface-dim": "#c8f31d",
+                        "on-secondary-container": "#7e4205",
+                        "on-primary-container": "#1d5c42",
+                        "on-tertiary-fixed": "#1d3557",
+                        "outline": "#708a00",
+                        "tertiary-fixed": "#bbd3fd",
+                        "primary-container": "#b1f0ce",
+                        "on-primary-fixed-variant": "#29664c",
+                        "surface": "#fbffe1",
+                        "secondary-fixed-dim": "#ffcaa4",
+                        "primary-dim": "#256348",
+                        "surface-container": "#e5ff92",
+                        "on-secondary-fixed-variant": "#8a4b11",
+                        "inverse-on-surface": "#96a369",
+                        "error-container": "#f56965",
+                        "on-tertiary-fixed-variant": "#3a5175",
+                        "tertiary": "#4e658a",
                         "on-tertiary": "#ffffff",
-                        "on-secondary-container": "#267320",
-                        "tertiary": "#55000c",
-                        "secondary-fixed": "#a4f792",
-                        "on-tertiary-fixed-variant": "#92001c",
-                        "surface": "#f7f9fb",
-                        "surface-container": "#eceef0",
-                        "on-tertiary-fixed": "#410007",
-                        "error": "#ba1a1a",
-                        "outline-variant": "#c1c8c2",
-                        "outline": "#717973",
-                        "primary": "#012d1d",
                         "on-error": "#ffffff",
-                        "background": "#f7f9fb",
-                        "surface-container-low": "#f2f4f6",
-                        "surface-bright": "#f7f9fb",
-                        "on-error-container": "#93000a",
-                        "secondary": "#1f6d1a",
-                        "on-primary-fixed-variant": "#274e3d",
-                        "on-secondary-fixed": "#002201",
-                        "surface-dim": "#d8dadc",
-                        "inverse-surface": "#2d3133",
-                        "surface-container-highest": "#e0e3e5",
-                        "on-surface": "#191c1e",
+                        "surface-variant": "#d2f754",
+                        "background": "#fbffe1",
+                        "surface-bright": "#fbffe1",
+                        "primary": "#336f54",
+                        "on-primary": "#ffffff",
+                        "error": "#b33938",
+                        "error-dim": "#70030f",
+                        "inverse-primary": "#beffdc",
+                        "secondary-container": "#ffdcc4",
+                        "on-error-container": "#65000b",
+                        "on-primary-fixed": "#014931",
+                        "primary-fixed": "#b1f0ce",
+                        "surface-container-highest": "#d2f754",
+                        "primary-fixed-dim": "#a3e2c0",
+                        "outline-variant": "#a4c624",
+                        "surface-container-low": "#f4ffc8",
+                        "secondary-dim": "#86480d",
+                        "tertiary-fixed-dim": "#aec5ee",
+                        "on-tertiary-container": "#31486b",
                         "on-secondary": "#ffffff",
-                        "surface-container-high": "#e6e8ea",
-                        "on-surface-variant": "#414844",
-                        "inverse-primary": "#a5d0b9",
-                        "on-primary-container": "#86af99",
-                        "on-background": "#191c1e",
-                        "tertiary-fixed": "#ffdad8",
-                        "primary-fixed-dim": "#a5d0b9"
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#303d00",
+                        "on-surface-variant": "#576c00"
                     },
                     borderRadius: {
-                        DEFAULT: "0.5rem",
+                        DEFAULT: "0.25rem",
                         lg: "0.5rem",
                         xl: "0.75rem",
                         full: "9999px"
                     },
                     fontFamily: {
                         headline: ["Plus Jakarta Sans"],
-                        body: ["Plus Jakarta Sans"],
-                        label: ["Plus Jakarta Sans"]
+                        body: ["Public Sans"],
+                        label: ["Public Sans"]
                     }
                 },
             },
@@ -81,24 +85,20 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .hero-gradient {
-            background: linear-gradient(135deg, #012d1d 0%, #1b4332 100%);
-        }
-        .editorial-shadow {
-            box-shadow: 0 32px 64px -12px rgba(1, 45, 29, 0.06);
-        }
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
     </style>
     <link href="styles.css" rel="stylesheet">
 </head>
-<body class="bg-surface text-on-surface antialiased">
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-container">
     <!-- TopNavBar -->
     <nav class="fixed top-0 w-full z-50 bg-[#fbffe1]/80 backdrop-blur-md dark:bg-[#303d00]/80">
         <div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
             <a class="flex items-center gap-3 text-2xl font-bold text-[#303d00] dark:text-[#fbffe1] font-['Plus_Jakarta_Sans'] tracking-tight" href="index.html">
                 <img alt="HopeRise Logo" class="h-20 w-25 object-contain" src="website images/Hope-rise-top-logo.webp" />
             </a>
-            <div class="hidden md:flex items-center gap-8">
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-gap-8 gap-8">
                 <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="index.html">Home</a>
                 <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="about.html">About Us</a>
                 <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="programs.html">Programs</a>
@@ -338,53 +338,67 @@
         </section>
     </main>
     <!-- Footer -->
-    <footer class="w-full rounded-t-[2rem] bg-emerald-50 dark:bg-emerald-950 mt-24">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+    <footer class="bg-[#f4ffc8] dark:bg-[#1a2000] w-full rounded-t-[2rem] mt-20">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 py-16 w-full max-w-7xl mx-auto">
             <div class="space-y-6">
-                <div class="flex items-center gap-2">
+                <div class="flex items-center gap-3">
                     <img alt="HopeRise Logo" class="h-12 w-15 object-contain" src="website images/Hope-rise-top-logo.webp" />
                 </div>
-                <p class="text-emerald-800/60 dark:text-emerald-300/60 leading-relaxed">
-                    © 2026 HopeRise. Dedicated to environmental restoration and human dignity.
+                <p class="text-[#303d00] dark:text-[#fbffe1] opacity-80 font-['Public_Sans'] text-sm leading-relaxed">
+                    Building resilient communities across Uganda through hope, empowerment, and sustainable action.
                 </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+                        <span class="material-symbols-outlined">public</span>
+                    </a>
+                    <a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+                        <span class="material-symbols-outlined">mail</span> 
+                    </a>
+                </div>
             </div>
-            <div>
-                <h4 class="text-emerald-900 dark:text-emerald-50 font-bold mb-6">Quick Links</h4>
-                <ul class="space-y-4 text-emerald-800/60 dark:text-emerald-300/60">
-                    <li><a class="hover:text-emerald-900 dark:hover:text-white transition-colors" href="programs.html">Our Programs</a></li>
-                    <li><a class="hover:text-emerald-900 dark:hover:text-white transition-colors" href="impact.html">Impact Data</a></li>
-                    <li><a class="hover:text-emerald-900 dark:hover:text-white transition-colors" href="gallery.html">Gallery</a></li>
-                    <li><a class="hover:text-emerald-900 dark:hover:text-white transition-colors" href="get-involved.html">Volunteer</a></li>
+            <div class="space-y-6">
+                <h4 class="font-bold text-[#336f54] dark:text-[#dcfb74]">Quick Links</h4>
+                <ul class="space-y-3 font-['Public_Sans'] text-sm">
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:translate-x-1 hover:text-[#336f54] transition-all block" href="about.html">History</a></li>
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:translate-x-1 hover:text-[#336f54] transition-all block" href="programs.html">HACS Program</a></li>
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:translate-x-1 hover:text-[#336f54] transition-all block" href="programs.html">EduSave</a></li>
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:translate-x-1 hover:text-[#336f54] transition-all block" href="gallery.html">Gallery</a></li>
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:translate-x-1 hover:text-[#336f54] transition-all block" href="impact.html">Josephine's Story</a></li>
+                    <li><a class="text-[#303d00] dark:text-[#fbffe1] opacity-80 hover:translate-x-1 hover:text-[#336f54] transition-all block" href="get-involved.html">Contact Us</a></li>
                 </ul>
             </div>
-            <div>
-                <h4 class="text-emerald-900 dark:text-emerald-50 font-bold mb-6">Contact Us</h4>
-                <ul class="space-y-3 text-sm text-emerald-800/60 dark:text-emerald-300/60">
+            <div class="space-y-6">
+                <h4 class="font-bold text-[#336f54] dark:text-[#dcfb74]">Contact Us</h4>
+                <ul class="space-y-3 font-['Public_Sans'] text-sm text-[#303d00] dark:text-[#fbffe1] opacity-80">
                     <li class="flex items-start gap-2">
                         <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
                         <span>Kirangira Village, Nama subcounty-Mukono District, Plot 314, Valentine Medical Centre, opposite the Kirangira Catholic Church.</span>
                     </li>
                     <li class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-base">mail</span>
-                        <a href="mailto:hoperiseuganda@gmail.com" class="hover:text-emerald-900 dark:hover:text-white transition-colors">hoperiseuganda@gmail.com</a>
+                        <a href="mailto:hoperiseuganda@gmail.com" class="hover:text-[#336f54] transition-colors">hoperiseuganda@gmail.com</a>
                     </li>
                     <li class="flex items-start gap-2">
                         <span class="material-symbols-outlined text-base mt-0.5">phone</span>
-                        <span><a href="tel:+256773907882" class="hover:text-emerald-900 dark:hover:text-white transition-colors block">+256773907882</a><a href="tel:+256778576374" class="hover:text-emerald-900 dark:hover:text-white transition-colors block">+256778576374</a></span>
+                        <span><a href="tel:+256773907882" class="hover:text-[#336f54] transition-colors block">+256773907882</a><a href="tel:+256778576374" class="hover:text-[#336f54] transition-colors block">+256778576374</a></span>
                     </li>
                 </ul>
             </div>
-            <div>
-                <h4 class="text-emerald-900 dark:text-emerald-50 font-bold mb-6">Newsletter</h4>
-                <p class="text-emerald-800/60 dark:text-emerald-300/60 mb-4 text-sm">Stay updated with our latest stories and impact reports.</p>
+            <div class="space-y-6">
+                <h4 class="font-bold text-[#336f54] dark:text-[#dcfb74]">Newsletter</h4>
+                <p class="text-[#303d00] dark:text-[#fbffe1] opacity-80 font-['Public_Sans'] text-sm">Subscribe to receive updates on our community projects.</p>
                 <div class="flex flex-col gap-2">
-                    <input id="footer-newsletter-impact" class="bg-white border-none rounded-lg flex-1 text-sm focus:ring-2 focus:ring-secondary p-3" placeholder="Email" type="email" />
-                    <button onclick="subscribeNewsletter('footer-newsletter-impact')" class="bg-primary text-on-primary p-3 rounded-lg font-bold text-sm active:scale-95 transition-transform">Subscribe</button>
+                    <input id="footer-newsletter-impact" class="bg-white/50 border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#336f54]" placeholder="Your email" type="email" />
+                    <button onclick="subscribeNewsletter('footer-newsletter-impact')" class="bg-[#336f54] text-white py-3 rounded-xl font-bold text-sm active:scale-95 transition-transform">Subscribe</button>
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-8 py-8 border-t border-emerald-900/10 text-center text-emerald-800/40 text-xs">
-            HopeRise is a registered non-profit organization. All donations are tax-deductible to the extent allowed by law.
+        <div class="max-w-7xl mx-auto px-12 pb-12 pt-8 border-t border-[#303d00]/5 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[#303d00]/60">
+            <p>© 2026 HopeRise for Vulnerable Communities Uganda. All rights reserved.</p>
+            <div class="flex gap-8">
+                <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+            </div>
         </div>
     </footer>
     <script src="script.js"></script>
