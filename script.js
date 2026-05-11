@@ -5,6 +5,7 @@ var SLIDER_MIN_INTERVAL = 2000;
 var SLIDER_DEFAULT_INTERVAL = 6000;
 var SLIDER_FADE_DURATION = 600;
 var sliderIntervals = [];
+var carouselIntervals = [];
 
 // ─── Mobile navigation toggle ────────────────────────────────
 function toggleMobileNav() {
@@ -47,13 +48,129 @@ function initImageSliders() {
     });
 }
 
+function initProgramCarousels() {
+    var carousels = document.querySelectorAll('[data-program-carousel]');
+    if (!carousels.length) return;
+
+    carousels.forEach(function (carousel) {
+        var slides = Array.prototype.slice.call(carousel.querySelectorAll('.program-carousel-slide'));
+        if (!slides.length) return;
+
+        var prevBtn = carousel.querySelector('[data-carousel-prev]');
+        var nextBtn = carousel.querySelector('[data-carousel-next]');
+        var dotsWrap = carousel.querySelector('[data-carousel-dots]');
+        var activeIndex = 0;
+        var autoplayDelay = parseInt(carousel.getAttribute('data-autoplay'), 10);
+        if (!Number.isFinite(autoplayDelay) || autoplayDelay < SLIDER_MIN_INTERVAL) autoplayDelay = 7000;
+        var touchStartX = 0;
+        var touchEndX = 0;
+
+        var dots = [];
+        if (dotsWrap) {
+            dotsWrap.innerHTML = '';
+            slides.forEach(function (_, index) {
+                var dot = document.createElement('button');
+                dot.type = 'button';
+                dot.className = 'carousel-dot' + (index === 0 ? ' is-active' : '');
+                dot.setAttribute('aria-label', 'Go to slide ' + (index + 1));
+                dot.addEventListener('click', function () {
+                    goTo(index);
+                    restartAutoplay();
+                });
+                dotsWrap.appendChild(dot);
+                dots.push(dot);
+            });
+        }
+
+        function updateUI() {
+            slides.forEach(function (slide, index) {
+                slide.classList.toggle('is-active', index === activeIndex);
+            });
+            dots.forEach(function (dot, index) {
+                dot.classList.toggle('is-active', index === activeIndex);
+            });
+        }
+
+        function goTo(index) {
+            var count = slides.length;
+            activeIndex = (index + count) % count;
+            updateUI();
+        }
+
+        function next() { goTo(activeIndex + 1); }
+        function prev() { goTo(activeIndex - 1); }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function () {
+                next();
+                restartAutoplay();
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function () {
+                prev();
+                restartAutoplay();
+            });
+        }
+
+        carousel.addEventListener('touchstart', function (event) {
+            if (!event.touches || !event.touches.length) return;
+            touchStartX = event.touches[0].clientX;
+            touchEndX = touchStartX;
+        }, { passive: true });
+
+        carousel.addEventListener('touchmove', function (event) {
+            if (!event.touches || !event.touches.length) return;
+            touchEndX = event.touches[0].clientX;
+        }, { passive: true });
+
+        carousel.addEventListener('touchend', function () {
+            var deltaX = touchEndX - touchStartX;
+            if (Math.abs(deltaX) < 40) return;
+            if (deltaX < 0) next();
+            if (deltaX > 0) prev();
+            restartAutoplay();
+        });
+
+        var autoplayId = null;
+        function startAutoplay() {
+            if (slides.length <= 1) return;
+            autoplayId = setInterval(function () { next(); }, autoplayDelay);
+            carouselIntervals.push(autoplayId);
+        }
+
+        function stopAutoplay() {
+            if (autoplayId) {
+                clearInterval(autoplayId);
+                autoplayId = null;
+            }
+        }
+
+        function restartAutoplay() {
+            stopAutoplay();
+            startAutoplay();
+        }
+
+        carousel.addEventListener('mouseenter', stopAutoplay);
+        carousel.addEventListener('mouseleave', startAutoplay);
+        carousel.addEventListener('focusin', stopAutoplay);
+        carousel.addEventListener('focusout', startAutoplay);
+
+        updateUI();
+        startAutoplay();
+    });
+}
+
 window.addEventListener('beforeunload', function () {
     sliderIntervals.forEach(function (intervalId) { clearInterval(intervalId); });
+    carouselIntervals.forEach(function (intervalId) { clearInterval(intervalId); });
 });
 
 // Close mobile nav when a link inside it is clicked
 document.addEventListener('DOMContentLoaded', function () {
     initImageSliders();
+    initProgramCarousels();
     document.querySelectorAll('#mobile-nav a').forEach(function (link) {
         link.addEventListener('click', function () {
             var nav = document.getElementById('mobile-nav');

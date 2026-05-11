@@ -148,21 +148,45 @@
         <section class="space-y-20">
             <!-- HACS -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="image-slider rounded-[2.5rem] shadow-2xl h-[360px] md:h-[440px]" data-image-slider="website images/415A1660.JPG|website images/415A1535.JPG|website images/415A1874.JPG"></div>
+                <div class="program-carousel rounded-[2.5rem] shadow-2xl h-[360px] md:h-[440px]" data-program-carousel data-autoplay="7000">
+                    <div class="program-carousel-track">
+                        <div class="program-carousel-slide is-active">
+                            <img src="website images/hacs1.jpg" alt="Healthcare Access &amp; Community Sanitation activity 1" loading="lazy" />
+                        </div>
+                        <div class="program-carousel-slide">
+                            <img src="website images/Hacs2.jpg" alt="Healthcare Access &amp; Community Sanitation activity 2" loading="lazy" />
+                        </div>
+                        <div class="program-carousel-slide">
+                            <img src="website images/Hacs3.jpg" alt="Healthcare Access &amp; Community Sanitation activity 3" loading="lazy" />
+                        </div>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-prev" type="button" data-carousel-prev aria-label="Previous HACS image">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button class="carousel-arrow carousel-arrow-next" type="button" data-carousel-next aria-label="Next HACS image">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                    <div class="carousel-dots" data-carousel-dots aria-label="HACS slider pagination"></div>
+                </div>
                 <div class="space-y-6">
                     <div class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-primary">medical_services</span>
                         <span class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">Healthcare &amp; Sanitation</span>
                     </div>
-                    <h2 class="text-4xl font-extrabold text-primary tracking-tight">Hope for a Child's Sanctuary (HACS)</h2>
+                    <h2 class="text-4xl font-extrabold text-primary tracking-tight">Healthcare Access &amp; Community Sanitation (HACS)</h2>
                     <p class="text-on-surface-variant leading-relaxed">
-                        Through Valentine Medical Centre and outreach clinics, we provide healthcare for families living with HIV/AIDS, maternal care, and treatment for common illnesses. We also train households on hygiene, nutrition, and WASH practices that prevent disease and keep children healthy.
+                        Through Valentine Medical Centre, we provide testing for malaria, typhoid, TB, and brucella, maternal care, minor surgery, and treatment for mild to moderate conditions for vulnerable children and adults.
                     </p>
-                    <ul class="space-y-3 text-sm font-medium text-on-surface">
-                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Community clinic care and HIV counseling</li>
-                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Medical outreach, immunisation, and family planning</li>
-                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>WASH and nutrition education with VHT partners</li>
-                    </ul>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        We also support families and children living with HIV/AIDS through adherence counselling and referrals back into treatment, while outreach teams bring check-ups, immunisation, family planning, nutritional support, and other essential services closer to underserved households.
+                    </p>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        With Village Health Teams, we deliver WASH, hygiene, nutrition, and disease prevention education to strengthen household-level health outcomes.
+                    </p>
+                    <div class="flex flex-wrap gap-3 text-sm font-semibold text-primary">
+                        <span class="px-4 py-2 rounded-full bg-secondary-container/70">700+ Medical Services</span>
+                        <span class="px-4 py-2 rounded-full bg-secondary-container/70">45+ Homes Reached</span>
+                    </div>
                 </div>
             </div>
             <!-- EduSave -->
@@ -172,35 +196,80 @@
                         <span class="material-symbols-outlined text-primary">school</span>
                         <span class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">Education &amp; Mentorship</span>
                     </div>
-                    <h2 class="text-4xl font-extrabold text-primary tracking-tight">EduSave Program</h2>
+                    <h2 class="text-4xl font-extrabold text-primary tracking-tight">EduSave — Education Sponsorship &amp; Mentorship</h2>
                     <p class="text-on-surface-variant leading-relaxed">
-                        EduSave identifies children who are out of school and provides fees, scholastic materials, and psychosocial support to keep them learning. We partner with EduSenga and local schools to deliver mentorship, life skills, and girl-child advocacy.
+                        EduSave identifies children living with HIV who are out of school, have dropped out, or are at risk of dropping out, then supports their return through school fees and scholastic materials.
                     </p>
-                    <ul class="space-y-3 text-sm font-medium text-on-surface">
-                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>School fees, uniforms, and learning materials</li>
-                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Mentorship on hygiene, mental health, and leadership</li>
-                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Menstrual hygiene and reproductive health awareness</li>
-                    </ul>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        In partnership with EduSenga and local schools, we provide psychosocial support and mentorship on hygiene, life goals, leadership, mental health, and girl-child empowerment.
+                    </p>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        We also run menstrual hygiene, reusable pad-making, and reproductive health awareness sessions while nurturing student-led “Each One, Support One” champion groups.
+                    </p>
+                    <div class="flex flex-wrap gap-3 text-sm font-semibold text-primary">
+                        <span class="px-4 py-2 rounded-full bg-secondary-container/70">90+ Children Supported</span>
+                        <span class="px-4 py-2 rounded-full bg-secondary-container/70">100% Retention Rate</span>
+                    </div>
                 </div>
-                <div class="image-slider rounded-[2.5rem] shadow-2xl h-[360px] md:h-[440px] order-1 lg:order-2" data-image-slider="website images/Our EduSave Champions.jpeg|website images/415A1529.JPG|website images/415A1644.JPG"></div>
+                <div class="program-carousel rounded-[2.5rem] shadow-2xl h-[360px] md:h-[440px] order-1 lg:order-2" data-program-carousel data-autoplay="7000">
+                    <div class="program-carousel-track">
+                        <div class="program-carousel-slide is-active">
+                            <img src="website images/edu3.jpg" alt="EduSave mentorship activity 1" loading="lazy" />
+                        </div>
+                        <div class="program-carousel-slide">
+                            <img src="website images/edu4.jpg" alt="EduSave mentorship activity 2" loading="lazy" />
+                        </div>
+                        <div class="program-carousel-slide">
+                            <img src="website images/edu5.jpg" alt="EduSave mentorship activity 3" loading="lazy" />
+                        </div>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-prev" type="button" data-carousel-prev aria-label="Previous EduSave image">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button class="carousel-arrow carousel-arrow-next" type="button" data-carousel-next aria-label="Next EduSave image">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                    <div class="carousel-dots" data-carousel-dots aria-label="EduSave slider pagination"></div>
+                </div>
             </div>
             <!-- SESLD -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="image-slider rounded-[2.5rem] shadow-2xl h-[360px] md:h-[440px]" data-image-slider="website images/415A1804.JPG|website images/415A1770.JPG|website images/415A1336.JPG"></div>
+                <div class="program-carousel rounded-[2.5rem] shadow-2xl h-[360px] md:h-[440px]" data-program-carousel data-autoplay="7000">
+                    <div class="program-carousel-track">
+                        <div class="program-carousel-slide is-active">
+                            <img src="website images/ses1.jpg" alt="SESLD skills development activity 1" loading="lazy" />
+                        </div>
+                        <div class="program-carousel-slide">
+                            <img src="website images/ses2.jpg" alt="SESLD skills development activity 2" loading="lazy" />
+                        </div>
+                        <div class="program-carousel-slide">
+                            <img src="website images/ses3.jpg" alt="SESLD skills development activity 3" loading="lazy" />
+                        </div>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-prev" type="button" data-carousel-prev aria-label="Previous SESLD image">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button class="carousel-arrow carousel-arrow-next" type="button" data-carousel-next aria-label="Next SESLD image">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                    <div class="carousel-dots" data-carousel-dots aria-label="SESLD slider pagination"></div>
+                </div>
                 <div class="space-y-6">
                     <div class="flex items-center gap-2">
                         <span class="material-symbols-outlined text-primary">work</span>
                         <span class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">Skills &amp; Livelihoods</span>
                     </div>
-                    <h2 class="text-4xl font-extrabold text-primary tracking-tight">Self-Help Entrepreneurial Skilling &amp; Livelihoods (SESLD)</h2>
+                    <h2 class="text-4xl font-extrabold text-primary tracking-tight">SESLD — Self-Help Entrepreneurial Skilling &amp; Livelihoods Development</h2>
                     <p class="text-on-surface-variant leading-relaxed">
-                        We equip young mothers and youth with hands-on skills in tailoring, carpentry, hairdressing, and craft shoe making. Entrepreneurship training and financial literacy help participants build stable, dignified livelihoods.
+                        SESLD equips young people, women, and vulnerable families with practical skills such as carpentry, tailoring, hairdressing, and craft shoe making to create immediate income opportunities.
                     </p>
-                    <ul class="space-y-3 text-sm font-medium text-on-surface">
-                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Vocational skills for immediate income generation</li>
-                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Business coaching and savings groups</li>
-                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Support for teenage mothers and school dropouts</li>
-                    </ul>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        Beyond vocational training, we build entrepreneurship and financial literacy so participants can start, grow, and sustain dignified livelihoods away from risky and unsustainable survival activities.
+                    </p>
+                    <div class="flex flex-wrap gap-3 text-sm font-semibold text-primary">
+                        <span class="px-4 py-2 rounded-full bg-secondary-container/70">50+ Youth Trained</span>
+                        <span class="px-4 py-2 rounded-full bg-secondary-container/70">15+ Businesses Started</span>
+                    </div>
                 </div>
             </div>
             <!-- EcoAdapt -->
@@ -210,17 +279,32 @@
                         <span class="material-symbols-outlined text-primary">eco</span>
                         <span class="text-xs font-bold tracking-widest text-on-surface-variant uppercase">Climate Adaptation</span>
                     </div>
-                    <h2 class="text-4xl font-extrabold text-primary tracking-tight">EcoAdapt Program</h2>
+                    <h2 class="text-4xl font-extrabold text-primary tracking-tight">EcoAdapt — Climate Adaptation &amp; Environmental Sustainability</h2>
                     <p class="text-on-surface-variant leading-relaxed">
-                        EcoAdapt restores greenery through agroforestry and home gardens while promoting climate-smart agriculture. We also support waste management, biogas training, and recycling initiatives that generate income and protect the environment.
+                        EcoAdapt establishes agroforestry home gardens, trains families in organic farming, and promotes biogas and recycling initiatives that reduce waste while creating income opportunities.
                     </p>
-                    <ul class="space-y-3 text-sm font-medium text-on-surface">
-                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Integrated household and school gardens</li>
-                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Biogas and biofertilizer training</li>
-                        <li class="flex items-center gap-3"><span class="w-2 h-2 rounded-full bg-secondary"></span>Organic farming and plastic recycling</li>
-                    </ul>
+                    <div class="flex flex-wrap gap-3 text-sm font-semibold text-primary">
+                        <span class="px-4 py-2 rounded-full bg-secondary-container/70">5 Household Gardens</span>
+                        <span class="px-4 py-2 rounded-full bg-secondary-container/70">3 School Gardens</span>
+                    </div>
                 </div>
-                <div class="image-slider rounded-[2.5rem] shadow-2xl h-[360px] md:h-[440px] order-1 lg:order-2" data-image-slider="website images/415A2051.JPG|website images/IMG20260410160930.jpg|website images/415A1644.JPG"></div>
+                <div class="program-carousel rounded-[2.5rem] shadow-2xl h-[360px] md:h-[440px] order-1 lg:order-2" data-program-carousel data-autoplay="7000">
+                    <div class="program-carousel-track">
+                        <div class="program-carousel-slide is-active">
+                            <img src="website images/eco1.jpg" alt="EcoAdapt environmental activity 1" loading="lazy" />
+                        </div>
+                        <div class="program-carousel-slide">
+                            <img src="website images/eco2.jpg" alt="EcoAdapt environmental activity 2" loading="lazy" />
+                        </div>
+                    </div>
+                    <button class="carousel-arrow carousel-arrow-prev" type="button" data-carousel-prev aria-label="Previous EcoAdapt image">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button class="carousel-arrow carousel-arrow-next" type="button" data-carousel-next aria-label="Next EcoAdapt image">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                    <div class="carousel-dots" data-carousel-dots aria-label="EcoAdapt slider pagination"></div>
+                </div>
             </div>
         </section>
         <!-- Featured Section: The Holistic Model -->
