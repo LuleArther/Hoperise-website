@@ -98,29 +98,46 @@
     </style>
     <link href="styles.css" rel="stylesheet">
 </head>
-<body class="antialiased">
+<body class="bg-surface text-on-surface antialiased">
     <!-- TopNavBar -->
-    <nav class="fixed top-0 w-full z-50 glass-nav shadow-sm shadow-emerald-900/5 h-20 px-8 flex justify-between items-center">
-        <div class="max-w-7xl mx-auto flex justify-between items-center w-full">
-            <a href="index.html" class="flex items-center gap-3">
-                <img class="h-20 w-25" src="website images/Hope-rise-top-logo.webp" alt="HopeRise Logo" />
+    <nav class="fixed top-0 w-full z-50 bg-[#fbffe1]/80 backdrop-blur-md dark:bg-[#303d00]/80">
+        <div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+            <a class="flex items-center gap-3 text-2xl font-bold text-[#303d00] dark:text-[#fbffe1] font-['Plus_Jakarta_Sans'] tracking-tight" href="index.html">
+                <img alt="HopeRise Logo" class="h-20 w-25 object-contain" src="website images/Hope-rise-top-logo.webp" />
             </a>
             <div class="hidden md:flex items-center gap-8">
-                <a class="text-emerald-800/70 font-medium hover:text-emerald-600 transition-all duration-300" href="index.html">Home</a>
-                <a class="text-emerald-800/70 font-medium hover:text-emerald-600 transition-all duration-300" href="about.html">About Us</a>
-                <a class="text-emerald-800/70 font-medium hover:text-emerald-600 transition-all duration-300" href="programs.html">Programs</a>
-                <a class="text-emerald-800/70 font-medium hover:text-emerald-600 transition-all duration-300" href="impact.html">Impact</a>
-                <a class="text-emerald-800/70 font-medium hover:text-emerald-600 transition-all duration-300" href="gallery.html">Gallery</a>
-                <a class="text-emerald-800/70 font-medium hover:text-emerald-600 transition-all duration-300" href="get-involved.html">Get Involved</a>
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="index.html">Home</a>
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="about.html">About Us</a>
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="programs.html">Programs</a>
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="impact.html">Impact</a>
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="gallery.html">Gallery</a>
+                <a class="text-[#303d00] dark:text-[#fbffe1] opacity-70 hover:opacity-100 transition-opacity font-['Plus_Jakarta_Sans'] tracking-tight hover:text-[#336f54] dark:hover:text-[#dcfb74]" href="get-involved.html">Get Involved</a>
             </div>
-            <a href="https://forms.gle/GFTeqpy48r8eHrxf6" target="_blank" rel="noopener noreferrer"
-               class="hero-gradient text-white px-6 py-2.5 rounded font-bold active:scale-95 transition-transform">
-                Volunteer
-            </a>
+            <div class="flex items-center gap-4">
+                <a href="https://forms.gle/GFTeqpy48r8eHrxf6" target="_blank" rel="noopener noreferrer" class="hidden md:block px-6 py-2 rounded-full border border-[#336f54] text-[#336f54] font-semibold active:scale-95 transition-transform hover:bg-[#336f54]/5">Volunteer</a>
+                <button type="button" disabled aria-current="page" aria-label="Donate (current page)" class="hidden md:block px-6 py-2 rounded-full bg-[#336f54]/70 text-white font-bold shadow-lg shadow-[#336f54]/15 cursor-not-allowed opacity-60">Donate</button>
+                <button onclick="toggleMobileNav()" class="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-[#336f54]/10 text-[#336f54]" aria-label="Toggle menu">
+                    <span class="material-symbols-outlined" id="mobile-nav-icon">menu</span>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-nav" class="md:hidden bg-[#fbffe1]/98 backdrop-blur-lg border-t border-[#336f54]/10 shadow-xl">
+            <div class="px-8 py-6 flex flex-col gap-1">
+                <a href="index.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">Home</a>
+                <a href="about.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">About Us</a>
+                <a href="programs.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">Programs</a>
+                <a href="impact.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">Impact</a>
+                <a href="gallery.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">Gallery</a>
+                <a href="get-involved.html" class="py-3 px-4 rounded-xl font-semibold text-[#303d00] hover:bg-[#336f54]/10 transition-colors">Get Involved</a>
+                <div class="flex flex-col gap-3 mt-4 pt-4 border-t border-[#336f54]/10">
+                    <a href="https://forms.gle/GFTeqpy48r8eHrxf6" target="_blank" rel="noopener noreferrer" class="py-3 px-6 rounded-full border border-[#336f54] text-[#336f54] font-bold text-center active:scale-95 transition-transform">Volunteer</a>
+                    <button type="button" disabled aria-current="page" aria-label="Donate (current page)" class="py-3 px-6 rounded-full bg-[#336f54]/70 text-white font-bold text-center cursor-not-allowed opacity-60">Donate</button>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <main class="pt-28 pb-24 px-6">
+    <main class="pt-32 pb-24 px-6">
         <div class="max-w-3xl mx-auto">
             <!-- Header -->
             <div class="text-center mb-12">

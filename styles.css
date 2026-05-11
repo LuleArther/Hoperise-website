@@ -1,5 +1,8 @@
 body {
     font-family: 'Public Sans', sans-serif;
+    background-color: #fbffe1;
+    color: #303d00;
+    line-height: 1.6;
 }
 
 h1,
@@ -9,6 +12,7 @@ h4,
 h5,
 h6 {
     font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.01em;
 }
 
 .material-symbols-outlined {
@@ -210,4 +214,21 @@ h6 {
 #mobile-nav.open {
     max-height: 560px;
     opacity: 1;
+}
+
+/* ─── Global UI consistency ───────────────────────────────────── */
+main {
+    overflow-x: clip;
+}
+
+section {
+    scroll-margin-top: 8rem;
+}
+
+main :is(.bg-white, .bg-surface-container-lowest, .bg-surface, .bg-surface-container-low) {
+    border: 1px solid rgba(51, 111, 84, 0.08);
+}
+
+main :is(.rounded-xl, .rounded-2xl, .rounded-3xl) {
+    box-shadow: 0 12px 28px -18px rgba(1, 45, 29, 0.28);
 }
