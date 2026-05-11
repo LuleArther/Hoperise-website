@@ -4,6 +4,7 @@ console.log("HopeRise website script loaded");
 var SLIDER_MIN_INTERVAL = 2000;
 var SLIDER_DEFAULT_INTERVAL = 6000;
 var SLIDER_FADE_DURATION = 600;
+var CAROUSEL_SWIPE_THRESHOLD = 40;
 var sliderIntervals = [];
 var carouselIntervals = [];
 
@@ -127,7 +128,7 @@ function initProgramCarousels() {
 
         carousel.addEventListener('touchend', function () {
             var deltaX = touchEndX - touchStartX;
-            if (Math.abs(deltaX) < 40) return;
+            if (Math.abs(deltaX) < CAROUSEL_SWIPE_THRESHOLD) return;
             if (deltaX < 0) next();
             if (deltaX > 0) prev();
             restartAutoplay();
