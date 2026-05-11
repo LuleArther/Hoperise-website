@@ -222,12 +222,7 @@ main {
 }
 
 section {
-    scroll-margin-top: 8.5rem;
-}
-
-main :is(a, button) {
-    transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease,
-                transform 0.2s ease, box-shadow 0.25s ease;
+    scroll-margin-top: 8rem;
 }
 
 main :is(.bg-white, .bg-surface-container-lowest, .bg-surface, .bg-surface-container-low) {
@@ -236,8 +231,4 @@ main :is(.bg-white, .bg-surface-container-lowest, .bg-surface, .bg-surface-conta
 
 main :is(.rounded-xl, .rounded-2xl, .rounded-3xl) {
     box-shadow: 0 12px 28px -18px rgba(1, 45, 29, 0.28);
-}
-
-main img {
-    display: block;
 }
